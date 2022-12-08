@@ -1,0 +1,32 @@
+:root {
+    --blue: #01369B;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+header{
+    padding: 20px;
+}
+.header_top{
+    display: flex;
+    justify-content: space-between;
+}
+.header_top img{
+    width: 30%;
+}
+.header_top a{
+    float: right;
+    margin: auto 0;
+}
+.header_txt{
+    text-align: center;
+}
+hr{
+    width: 100%;
+    height: 10px;
+    background-color: var(--blue);
+}
