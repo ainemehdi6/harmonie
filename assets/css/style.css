@@ -1,5 +1,13 @@
 :root {
     --blue: #01369B;
+    --footerColor: #2522;
+    --orange: #E5994A;
+    --black: #000000;
+    --white: #FEF1F1;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
 }
 body{
     margin: 0;
