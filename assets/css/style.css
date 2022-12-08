@@ -1,3 +1,4 @@
+/* CSS EL MEHDI */
 :root {
     --blue: #01369B;
     --footerColor: #2522;
@@ -39,12 +40,12 @@ img{
 .login_header .header_txt{
     text-align: center;
 }
-header{
+.header_top{
     padding: 10px;
     display: flex;
     justify-content: space-between;
 }
-header img{
+.header_top img{
     width: 20%;
 }
 header *{
@@ -62,3 +63,361 @@ hr{
     height: 10px;
     background-color: var(--blue);
 }
+footer{
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS PHILIPPE */
+/* Tableau liste des événements user */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+.center-text{
+    text-align: center;
+}
+/* boutons événement user */
+.button{
+    border-radius: 0.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS OUSSAMA */ 
+.padding_connexion{
+    margin: auto;
+}
+.login_inter{
+    background-color:  var(--blue);
+    border-radius: 10px;
+    border: none;
+    color: var(--white);
+
+
+}
+
+
+
+
+
+
+
