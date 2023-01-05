@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    session_start();
+    include('DAO.php');
+    $dao=new DAO();
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,28 +14,27 @@
     <title>Liste des événements</title>
 </head>
 <body>
-    <header>
-
-    </header>
+    <?php include('assets/models/header.html') ?>
     <main>
         <h2 class="center-text">Liste des événements</h2>
-
+      
         <table>
           <tr>
             <th>Date</th>
             <th>Nom</th>
             <th>Description</th>
           </tr>
-          <tr>
-            <td>10/12/2022</td>
-            <td>Concert de Bergues</td>
-            <td>Représentation musicale devant la mairie de Bergues à 14h</td>
-          </tr>
-          <tr>
-            <td>17/03/2022</td>
-            <td>Répétition musicale Wormhout</td>
-            <td>Départ à 15h</td>
-          </tr>
+          <?php 
+            $listEvent = $dao->listeEvents();
+            foreach($listEvent as $event){
+              echo'
+                <tr>
+                  <td>'.$event[3].'</td>
+                  <td>'.$event[1].'</td>
+                  <td>'.$event[2].'</td>
+                </tr>';
+            }
+          ?>
         </table>
 
     </main>
