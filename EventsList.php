@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
     session_start();
-    include('DAO.php');
+    include_once('DAO.php');
     $dao=new DAO();
 ?>
 <head>
@@ -14,7 +14,7 @@
     <title>Liste des événements</title>
 </head>
 <body>
-    <?php include('assets/models/header.html') ?>
+    <?php include_once('assets/models/header.html') ?>
     <main>
         <h2 class="center-text">Liste des événements</h2>
       

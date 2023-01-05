@@ -10,7 +10,7 @@
     
 </head>
 <body>
-    <header class="login_header">
+    <header >
         <div class="header_top">
             <img src="assets/images/logo.png" alt="logo Harmonie">
             <a href=""><i class="fa-sharp fa-solid fa-gear"></i></a>

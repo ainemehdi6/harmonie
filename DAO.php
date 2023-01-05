@@ -2,7 +2,7 @@
 class DAO{
 	public function __construct(){}
 	public function connexion(){
-		$pdo = new PDO('mysql:host=127.0.0.1;dbname=harmonie','root','20192020');
+		$pdo = new PDO('mysql:host=127.0.0.1;dbname=harmonie','root','');
 		return $pdo;
 	}
 	public function authentificationUser($email,$password){
@@ -23,13 +23,26 @@ class DAO{
    		$reponse->closeCursor();  
    		return $lst;
 	}
+	public function listeParticipants($eventId){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("SELECT event.idEvent,user.idUser,
+		user.firstName,user.lastName from user,event,participants where user.idUser = participants.idUser 
+		and event.idEvent=participants.idEvent and participants.idEvent = ?");
+   		$reponse->execute([$eventId]);
+   		$lst=[];
+   		while($ligne=$reponse->fetch()){
+  	  		$lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3]];
+  		}
+   		$reponse->closeCursor();  
+   		return $lst;
+	}
 	public function EventById($id){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT * from event where idEvent= ?");
    		$reponse->execute([$id]);
    		$lst=[];
    		while($ligne=$reponse->fetch()){
-  	  		$lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3],$ligne[4],$ligne[5],$ligne[6]];
+  	  		$lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3],$ligne[4],$ligne[5]];
   		}
    		$reponse->closeCursor();  
    		return $lst;
