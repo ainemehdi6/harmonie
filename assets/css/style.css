@@ -65,11 +65,14 @@ hr{
     height: 10px;
     background-color: var(--blue);
 }
+
 footer{
+    margin-top: 50px;
     width: 100%;
+    padding: 5px;
     background-color: var(--black);
     color: var(--white);
-    position: absolute;
+    position: relative;
     bottom: 0;
     text-align: center;
 }
@@ -92,7 +95,29 @@ table td{
     color: var(--orange);
     border: solid 1px var(--orange);
 }
+.btns-grp{
+    display: flex;
+    justify-content: space-between;
+}
+.btn-main{
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 10px 20px;
+    margin: 20px;
 
+}
+.event-titre{
+    font-size: 28px;
+    font-weight: bold;
+}
+.event-descrip{
+    font-size: 20px;
+    font-weight: 600;
+}
+.event-date{
+    font-size: 28px;
+    font-weight: bold;
+}
 
 
 

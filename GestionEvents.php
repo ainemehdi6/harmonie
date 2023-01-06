@@ -11,34 +11,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/b9398f24d6.js" crossorigin="anonymous"></script>
-    <title>Liste des événements</title>
+    <title>Gestion des événements</title>
 </head>
 <body>
     <?php include_once('assets/models/header.html') ?>
     <main>
-        <h2 class="center-text">Liste des événements</h2>
-      
+        <h1 class="center-text">Gestion des évènements</h1>
+        <div class="btns-grp">
+            <a href="#" class="button btn-main">Ajouter</a>
+            <a href="#" class="button btn-main">Modifier</a>
+        </div>
         <table>
-          <tr>
-            <th>Date</th>
-            <th>Nom</th>
-            <th>Description</th>
-          </tr>
-          <?php 
-            $listEvent = $dao->listeEvents();
-            foreach($listEvent as $event){
-              echo'
-                <tr>
-                  <td>'.$event[3].'</td>
-                  <td>'.$event[1].'</td>
-                  <td>'.$event[2].'</td>
-                </tr>';
-            }
-          ?>
-        </table>
 
+        </table>
     </main>
     <?php include_once('assets/models/footer.html') ?>
 </body>
-
-</html>
+</html>    

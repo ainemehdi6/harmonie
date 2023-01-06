@@ -27,9 +27,9 @@
         foreach($event as $info)
         {
           echo'
-            <h2 class="center-text">'.$info[1].'</h2>
-            <p class="center-text">'.$info[2].'</p>
-            <p class="center-text">'.$info[3].'</p>
+            <h2 class="center-text event-titre">'.$info[1].'</h2>
+            <p class="center-text event-descrip">'.$info[2].'</p>
+            <p class="center-text event-date">'.$info[3].'</p>
 
           ';
         }
@@ -61,9 +61,7 @@
         </table>
 
     </main>
-    <footer>
-
-    </footer>
+    <?php include_once('assets/models/footer.html') ?>
 </body>
 
 </html>
