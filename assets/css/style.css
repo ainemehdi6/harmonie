@@ -6,6 +6,7 @@
     --orange: #E5994A;
     --black: #000000;
     --white: #f8f8f8;
+    --gray:#D9D9D9;
 }
 @font-face {
     font-family: Inter;
@@ -459,10 +460,76 @@ table {
 
 
 }
+main{
+    display: flex;
+}
+.main{
+ margin: auto;    
+}
+form{
+    display: grid;
+  
+    
+}
+.button{
+    display: flex;
+  
+}
+button{
+    margin: 4px auto auto auto;
+    background-color: var(--blue);  
+    color: white;
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.input{
+    display: flex;
+}
+input{
+    margin: auto;
+    background-color: var(--gray);
+    padding: 5px;
+}
+h1{
+    margin-bottom: 25%;
+    margin-left: 25px;
+}
+.probleme{
+    display: flex;
+    
+}
+a{
+    margin: auto;
+    text-decoration: underline;
+    color: var(--black);
 
+ 
+}
+.buttons{
+    display: grid;
+    margin:auto;
+}
 
-
-
+.button{
+    
+    width:200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    
+}
+.button_font a{
+    color: white;
+    
+}
+.deco{
+    display: flex;
+}
+.deco a{
+    margin :auto;
+    font-weight: bold;
+}
 
 
 
