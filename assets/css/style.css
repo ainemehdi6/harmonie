@@ -250,7 +250,10 @@ table {
 .button{
     border-radius: 0.4rem;
 }
-
+/* CSS text footer */
+.problem-link {
+    text-decoration: none;
+}
 
 
 

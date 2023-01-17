@@ -41,9 +41,7 @@
         </table>
     </main>
     
-    <footer>
-        <p>Harmonie de Bergeues &#169; - 2022</p>
-    </footer>
+    <?php include_once('assets/models/footer.html') ?>
 </body>
 
 </html>

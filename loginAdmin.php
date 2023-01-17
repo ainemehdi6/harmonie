@@ -36,14 +36,12 @@
                     <button>Se connecter</button>
                 </div>
 
-                <a href="">Probléme de <br> connexion ?</a>
+                <a href="" class="link-problem">Problème de <br> connexion ?</a>
         </div>
         </form>
 
     </main>
-    <footer>
-        <p>Harmonie de Bergeues &#169; - 2022</p>
-    </footer>
+    <?php include_once('assets/models/footer.html') ?>
 </body>
 
 </html>

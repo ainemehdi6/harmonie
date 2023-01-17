@@ -12,16 +12,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="header_top">
-            <img src="assets/images/logo.png" alt="logo Harmonie">
-            <a href=""><i class="fa-sharp fa-solid fa-gear"></i></a>
-        </div>
-        <div class="header_txt">
-            <h2>Bienvenue sur l’application de L’Harmonie de Bergues</h2>
-        </div>
-    </header>
-    <hr>
+<?php include_once('assets/models/header.html') ?>
+
     <main>
         <div class="main">
             <h1>Connexion</h1>
@@ -32,15 +24,13 @@
                 <div class="button">
                     <button>Se connecter</button>
                 </div>
-
-                <a href="">Probléme de <br> connexion ?</a>
+                
+                <a href="" class="problem-link">Problème de <br><hr class="hr-footer"> connexion ?</a>
         </div>
         </form>
 
     </main>
-    <footer>
-        <p>Harmonie de Bergeues &#169; - 2022</p>
-    </footer>
+    <?php include_once('assets/models/footer.html') ?>
 </body>
 
 </html>
