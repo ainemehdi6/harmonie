@@ -5,6 +5,7 @@ class DAO{
 		$pdo = new PDO('mysql:host=127.0.0.1;dbname=harmonie','root','');
 		return $pdo;
 	}
+	
 	public function authentificationUser($email,$password){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT * from users where email= ? and password = ?");
@@ -12,6 +13,7 @@ class DAO{
    		if ($ligne=$reponse->fetch()) return true;
    		else return false;
 	}
+
     public function listeEvents(){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT * from event ");
@@ -23,6 +25,19 @@ class DAO{
    		$reponse->closeCursor();  
    		return $lst;
 	}
+
+	public function listeUsers(){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("SELECT * from user ");
+   		$reponse->execute([]);
+   		$lst=[];
+   		while($ligne=$reponse->fetch()){
+  	  		$lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3],$ligne[4],$ligne[5]];
+  		}
+   		$reponse->closeCursor();  
+   		return $lst;
+	}
+
 	public function listeParticipants($eventId){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT event.idEvent,user.idUser,
@@ -36,6 +51,7 @@ class DAO{
    		$reponse->closeCursor();  
    		return $lst;
 	}
+
 	public function EventById($id){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT * from event where idEvent= ?");
@@ -47,6 +63,7 @@ class DAO{
    		$reponse->closeCursor();  
    		return $lst;
 	}	
+
 	public function AddCoursMod($name,$id,$desc){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("INSERT INTO CoursMod(name,Degreeid,description) values(?,?,?)");
@@ -54,6 +71,7 @@ class DAO{
 		   if ($ligne=$reponse->fetch()) return true;
    		else return false;
 	}
+
 	public function UpdateCoursMod($name,$degid,$desc,$id){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("UPDATE CoursMod SET name=?, Degreeid=?, description=? WHERE id=?");
@@ -61,6 +79,7 @@ class DAO{
 		   if ($ligne=$reponse->fetch()) return true;
    		else return false;
 	}
+
 	public function UpdateCours($name,$degid,$desc,$id){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("UPDATE Cours SET name=?, CoursModid=?, description=? WHERE id=?");
@@ -68,4 +87,5 @@ class DAO{
 		   if ($ligne=$reponse->fetch()) return true;
    		else return false;
 	}
+
 }    
