@@ -26,7 +26,7 @@
             <th>Email</th>
           </tr>
           <?php 
-            $listUsers = $dao->$listUsers();
+            $listUsers = $dao->listeUsers();
             foreach($listUsers as $user){
               echo'
                 <tr>
