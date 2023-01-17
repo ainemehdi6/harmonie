@@ -533,6 +533,17 @@ a{
     margin :auto;
     font-weight: bold;
 }
+.texte{
+    display: block;
+    text-align: center;
+}
+.texte h1{
+    margin-bottom: 10px;
+}
+p{
+font-weight: bolder;
+font-size: larger;
+}
 
 
 

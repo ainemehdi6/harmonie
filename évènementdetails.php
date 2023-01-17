@@ -7,19 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/b9398f24d6.js" crossorigin="anonymous"></script>
-    <title>Login page</title>
+    <title>évènementdetails</title>
 
 </head>
 
 <body>
     
     <?php include_once('assets/models/header.html') ?>
-       
+     
     
-    
-
+  <div class="texte">
+        <h1>Concert Ste Cécile</h1>
+        <h3>Salle Looten Bergues</h2>
+        <p>25/09/2022</p>
+    </div>
 
     <main>
+      
         <table>
             <thead>
                 <tr>
