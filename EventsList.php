@@ -2,6 +2,10 @@
 <html lang="en">
 <?php
     session_start();
+    if(!isset($_SESSION['idAdmin']))
+    {
+      header("location:../loginAdmin.php.php?erreur=2");
+    }
     include_once('DAO.php');
     $dao=new DAO();
 ?>

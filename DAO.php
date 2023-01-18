@@ -82,6 +82,14 @@ class DAO{
    		$reponse->execute([$titre,$description,$date,$idAdmin]); 
 		   if ($ligne=$reponse->fetch()) return true;
    		else return false;
-	}	
+	}
+	
+	public function deleteEvent($idEvent){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("DELETE from event where idEvent=?");
+   		$reponse->execute([$idEvent]); 
+		   if ($ligne=$reponse->fetch()) return true;
+   		else return false;
+	}
 
 }    

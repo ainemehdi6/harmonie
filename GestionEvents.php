@@ -2,6 +2,10 @@
 <html lang="en">
 <?php
     session_start();
+    if(!isset($_SESSION['idAdmin']))
+    {
+      header("location:../loginAdmin.php.php?erreur=2");
+    }
     include_once('DAO.php');
     $dao=new DAO();
 ?>
@@ -16,9 +20,7 @@
     <title>Gestion des événements</title>
 </head>
 <body>
-    <style>
-
-    </style>
+    
     <?php include_once('assets/models/header.html') ?>
     <main id="main">
         <h1 class="center-text">Gestion des évènements</h1>
@@ -35,20 +37,29 @@
                 <th>Nbr de participants</th>
                 <th>Action</th>
             </tr>
-            <tr>
-                <td><input type="text" name="date" value="21/04/2023"></td>
-                <td><input type="text" name="titre" value="Premier événement"></td>
-                <td><input type="text" name="descriptin" value="description de l'évenement"></td>
-                <td>
-                    <select name="statut">
-                        <option value="0">En cours</option>
-                        <option value="1">Passé</option>
-                        <option value="2">Annulé</option>
-                    </select>
-                </td>
-                <td>12/20</td>
-                <td><a href="#"><i class="fa-solid fa-trash"></i></a><a href="#"><i class="fa-solid fa-eye"></i></a></td>
-            </tr>
+                <?php 
+                $listEvent = $dao->listeEvents();
+                foreach($listEvent as $event){
+                echo'
+                <tr>
+                    <td><input type="text" name="date" value="'.$event[3].'"></td>
+                    <td><input type="text" name="titre" value="'.$event[1].'"></td>
+                    <td><input type="text" name="descriptin" value="'.$event[2].'"></td>
+                    <td>
+                        <select name="statut">
+                            <option value="'.$event[4].'">'.$event[4].'</option>
+                            <option value="0">En cours</option>
+                            <option value="1">Passé</option>
+                            <option value="2">Annulé</option>
+                        </select>
+                    </td>
+                    <td>12/20</td>
+                    <td><a href="controllers/deleteEvent.php?idEvent='.$event[0].'"><i class="fa-solid fa-trash"></i></a>&nbsp&nbsp&nbsp&nbsp<a href="#"><i class="fa-solid fa-eye"></i></a></td>
+                </tr>';
+                }
+            ?>
+                
+            
         </table>
     </main>
     <div class="post-popup job_post" id="job_post">
