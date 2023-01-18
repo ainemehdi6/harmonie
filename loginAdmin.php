@@ -30,7 +30,7 @@
                     <input type="text" name="email" placeholder="Email">
                 </div> <br>
                 <div class="input">
-                    <input type="text" name="password" placeholder="Mot de passe">
+                    <input type="password" name="password" placeholder="Mot de passe">
                 </div>
                 <div class="button">
                     <button type="submit">Se connecter</button>
