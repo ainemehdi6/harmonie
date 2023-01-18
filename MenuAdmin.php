@@ -22,10 +22,10 @@
 
 <body>
 <?php include_once('assets/models/header.html') ?>
-    <main>
-        <div class="buttons">
+    <main style="display:flex;">
+        <div class="buttons" style="margin:50px auto 0 auto;">
             <div class="button_font">
-                <a href="#" class="button"> Gestion des membres</a>
+                <a href="#" class="button" > Gestion des membres</a>
             </div>
 
             <div class="button_font">
