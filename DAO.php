@@ -8,10 +8,22 @@ class DAO{
 	
 	public function authentificationUser($email,$password){
 		$bdd=$this->connexion();
-		$reponse=$bdd->prepare("SELECT * from users where email= ? and password = ?");
+		$reponse=$bdd->prepare("SELECT * from admin where email= ? and password = ?");
    		$reponse->execute([$email,$password]);
    		if ($ligne=$reponse->fetch()) return true;
    		else return false;
+	}
+
+	public function User($email){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("SELECT idAdmin from admin where email= ?");
+		$reponse->execute([$email]);
+		$lst=[];
+		while($ligne=$reponse->fetch()){
+			 $lst[]=[$ligne[0]];
+	   }
+		$reponse->closeCursor();  
+		return $lst;
 	}
 
     public function listeEvents(){

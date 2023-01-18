@@ -12,35 +12,35 @@
 </head>
 
 <body>
-    <header>
+    <header >
         <div class="header_top">
-            <img src="assets/images/logo.png" alt="logo Harmonie">
-            <a href=""><i class="fa-sharp fa-solid fa-gear"></i></a>
+            <img src="assets/images/logo.jpeg" alt="logo Harmonie">
+            <a href="loginUser.php"><i class="fa-solid fa-gear"></i></a>
         </div>
         <div class="header_txt">
-            <h2>Bienvenue sur l’application de L’Harmonie de Bergues</h2>
+            <h2>Bienvenue</h2>
         </div>
     </header>
     <hr>
-    <main>
+    <div class="container">
         <div class="main">
             <h1>Connexion</h1>
-            <form action="" method="POST">
+            <form action="controllers/loginAdmin.php" method="POST">
                 <div class="input">
-                    <input type="text" name="code" placeholder="Identifiant">
+                    <input type="text" name="email" placeholder="Email">
                 </div> <br>
                 <div class="input">
-                    <input type="text" name="code" placeholder="code d'accès">
+                    <input type="text" name="password" placeholder="Mot de passe">
                 </div>
                 <div class="button">
-                    <button>Se connecter</button>
+                    <button type="submit">Se connecter</button>
                 </div>
 
-                <a href="" class="link-problem">Problème de <br> connexion ?</a>
+                <a href="#" class="link-problem">Problème de <br> connexion ?</a>
         </div>
         </form>
 
-    </main>
+</div>
     <?php include_once('assets/models/footer.html') ?>
 </body>
 

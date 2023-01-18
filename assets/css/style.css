@@ -16,8 +16,9 @@ body{
     margin: 0;
     padding: 0;
     font-family: Inter;
-    background-color: var(--white);
+    background-color: #ffffff;
 }
+
 img{
     width: 100%;
 }
@@ -62,14 +63,16 @@ header .header_title hr{
     background-color: var(--black);
 }
 hr{
-    width: 99.8%;
+    width: 99.5%;
     height: 10px;
     background-color: var(--blue);
 }
-
+input,button{
+    border: none;
+}
 footer{
     margin-top: 50px;
-    width: 100%;
+    width: 99%;
     padding: 5px;
     background-color: var(--black);
     color: var(--white);
@@ -101,11 +104,18 @@ table td{
     justify-content: space-between;
 }
 .btn-main{
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    text-decoration: none;
     color: var(--white);
     background-color: var(--blue);
     padding: 10px 20px;
     margin: 20px;
-
+    width: fit-content;
+}
+.overlay{
+    opacity: 0.4;
 }
 .event-titre{
     font-size: 28px;
@@ -119,8 +129,129 @@ table td{
     font-size: 28px;
     font-weight: bold;
 }
-
-
+.post-popup {
+	width: 570px;
+	margin: 0 auto;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.65);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.65);
+	-ms-transform: translateX(-50%) translateY(-50%) scale(0.65);
+	-o-transform: translateX(-50%) translateY(-50%) scale(0.65);
+	transform: translateX(-50%) translateY(-50%) scale(0.65);
+	opacity: 0;
+	visibility: hidden;
+	z-index: 0;
+}
+.post-popup.active {
+	opacity: 1;
+	visibility: visible;
+	z-index: 999;
+	-webkit-transform: scale(1) translateX(-50%) translateY(-50%);
+}
+.post-project > a {
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+}
+.post-project > a:hover {
+	color: #fff;
+}
+.post-project {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.post-project h3 {
+	float: left;
+	width: 100%;
+	background-color: var(--blue);
+	color: #fff;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 20px 0;
+}
+.post-project-fields {
+	float: left;
+	width: 88%;
+	padding: 30px 20px;
+	background-color: #fff;
+}
+.post-project-fields form {
+	float: left;
+	width: 100%;
+}
+.post-project-fields form input {
+	padding: 0 15px;
+	height: 40px;
+}
+.post-project-fields form textarea {
+	padding: 15px;
+	height: 130px;
+}
+.post-project-fields form input,
+.post-project-fields form textarea,
+.post-project-fields form select {
+	width: 100%;
+	color: #b2b2b2;
+	font-size: 14px;
+	border: 1px solid #e5e5e5;
+	margin-bottom: 20px;
+	font-weight: 500;
+}
+.post-project-fields form select {
+	height: 40px;
+	padding: 0 10px;
+}
+.post-project-fields form ul {
+	float: left;
+	margin-top: 10px;
+	width: 100%;
+}
+.post-project-fields form ul li {
+	display: inline-block;
+	margin-right: 15px;
+}
+.post-project-fields form ul li button.active {
+	background-color: var(--blue);
+	color: #fff;
+}
+.post-project-fields form ul li button,
+.post-project-fields form ul li a {
+	color: var(--black);
+	font-size: 16px;
+	border: 1px solid #e5e5e5;
+	padding: 10px 25px;
+	display: inline-block;
+	background-color: #fff;
+	font-weight: 600;
+	cursor: pointer;
+}
+.post-project-fields form ul li button:hover,
+.post-project-fields form ul li a:hover {
+	background-color: var(--blue);
+	color: #fff;
+} 
+.post-project-fields form input,
+.post-project-fields form textarea,
+.post-project-fields form select,
+.post-project-fields form ul li button,
+.post-project-fields form ul li a,
+job_post.post-popup,
+.post-project > a,
+.post-project-fields form ul li button,
+.post-project-fields form ul li a{
+	-webkit-transition: all 0.4s ease-in;
+	-moz-transition: all 0.4s ease-in;
+	-ms-transition: all 0.4s ease-in;
+	-o-transition: all 0.4s ease-in;
+	transition: all 0.4s ease-in;
+}
 
 
 
@@ -463,7 +594,7 @@ table {
 
 
 }
-main{
+.container{
     display: flex;
 }
 .main{
@@ -493,10 +624,6 @@ input{
     margin: auto;
     background-color: var(--gray);
     padding: 5px;
-}
-h1{
-    margin-bottom: 25%;
-    margin-left: 25px;
 }
 .probleme{
     display: flex;
@@ -547,3 +674,30 @@ font-size: larger;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header_top img{
+    max-width: 150px;
+    height: auto;
+}

@@ -17,7 +17,7 @@
     <?php include_once('assets/models/header.html') ?>
     <main>
         <h2 class="center-text">Liste des événements</h2>
-      
+        <br>
         <table>
           <tr>
             <th>Date</th>

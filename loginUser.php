@@ -12,9 +12,17 @@
 </head>
 
 <body>
-<?php include_once('assets/models/header.html') ?>
-
-    <main>
+    <header >
+        <div class="header_top">
+            <img src="assets/images/logo.jpeg" alt="logo Harmonie">
+            <a href="loginAdmin.php"><i class="fa-solid fa-gear"></i></a>
+        </div>
+        <div class="header_txt">
+            <h2>Bienvenue</h2>
+        </div>
+    </header>
+    <hr>
+    <div class="container">
         <div class="main">
             <h1>Connexion</h1>
             <form action="" method="POST">
@@ -25,11 +33,11 @@
                     <button>Se connecter</button>
                 </div>
                 
-                <a href="" class="problem-link">Problème de <br><hr class="hr-footer"> connexion ?</a>
+                <a href="" class="problem-link">Problème de <br> connexion ?</a>
         </div>
         </form>
 
-    </main>
+</div>
     <?php include_once('assets/models/footer.html') ?>
 </body>
 
