@@ -92,4 +92,12 @@ class DAO{
    		else return false;
 	}
 
+	public function EditEvent($titre,$description,$date,$statut,$idEvent){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("UPDATE event set titre=?,description=?,date=?,statut=? where idEvent=?");
+   		$reponse->execute([$titre,$description,$date,$statut,$idEvent]); 
+		   if ($ligne=$reponse->fetch()) return true;
+   		else return false;
+	}
+
 }    

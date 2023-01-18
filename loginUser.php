@@ -27,10 +27,10 @@
             <h1>Connexion</h1>
             <form action="" method="POST">
                 <div class="input">
-                    <input type="text" name="code">
+                    <input type="password" name="password">
                 </div>
                 <div class="button">
-                    <button>Se connecter</button>
+                    <button type="submit">Se connecter</button>
                 </div>
                 
                 <a href="" class="problem-link">Problème de <br> connexion ?</a>
