@@ -61,11 +61,21 @@
                 $ListPaticipant = $dao->listeParticipants($idEvent);
                 foreach($ListPaticipant as $Particip){
                     echo'
-                    <tr>
+                    <tr style="background-color:rgba(56, 255, 148, 0.3)">
+                        <td>'.$Particip[1].'</td>
                         <td>'.$Particip[2].'</td>
                         <td>'.$Particip[3].'</td>
                         <td>'.$Particip[4].'</td>
-                        <td>'.$Particip[5].'</td>
+                    </tr>';
+                }
+                $ListNonPaticipant = $dao->listeNonParticipants($idEvent);
+                foreach($ListNonPaticipant as $NonParticip){
+                    echo'
+                    <tr style="background-color:rgba(255, 80, 56, 0.3)">
+                        <td>'.$NonParticip[1].'</td>
+                        <td>'.$NonParticip[2].'</td>
+                        <td>'.$NonParticip[3].'</td>
+                        <td>'.$NonParticip[4].'</td>
                     </tr>';
                 }
             ?>

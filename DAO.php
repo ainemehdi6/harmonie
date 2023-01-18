@@ -6,6 +6,28 @@ class DAO{
 		return $pdo;
 	}
 	
+	public function NumberOfPresents($idEvent){
+		$con = mysqli_connect('127.0.0.1','root','','harmonie');
+		mysqli_select_db($con,"harmonie");
+		$sql="select distinct count(idUser) from participants where idEvent=$idEvent ";
+		$query = mysqli_query($con,$sql);
+		$result = mysqli_fetch_assoc($query);
+		$resultstring = $result['count(idUser)'];
+		mysqli_close($con); 
+   		return $resultstring;
+	}
+
+	public function NumberOfMembers(){
+		$con = mysqli_connect('127.0.0.1','root','','harmonie');
+		mysqli_select_db($con,"harmonie");
+		$sql="select distinct count(idUser) from user";
+		$query = mysqli_query($con,$sql);
+		$result = mysqli_fetch_assoc($query);
+		$resultstring = $result['count(idUser)'];
+		mysqli_close($con); 
+   		return $resultstring;
+	}
+
 	public function authentificationUser($email,$password){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT * from admin where email= ? and password = ?");
@@ -28,7 +50,7 @@ class DAO{
 
     public function listeEvents(){
 		$bdd=$this->connexion();
-		$reponse=$bdd->prepare("SELECT * from event ");
+		$reponse=$bdd->prepare("SELECT * from event ORDER BY date DESC");
    		$reponse->execute([]);
    		$lst=[];
    		while($ligne=$reponse->fetch()){
@@ -52,13 +74,27 @@ class DAO{
 
 	public function listeParticipants($eventId){
 		$bdd=$this->connexion();
-		$reponse=$bdd->prepare("SELECT event.idEvent,user.idUser,
-		user.firstName,user.lastName, user.email,user.phoneNumber from user,event,participants where user.idUser = participants.idUser 
-		and event.idEvent=participants.idEvent and participants.idEvent = ?");
+		$reponse=$bdd->prepare("SELECT user.idUser,user.firstName,user.lastName, 
+		user.email,user.phoneNumber from user,event,participants 
+		where user.idUser = participants.idUser and event.idEvent=participants.idEvent 
+		and participants.idEvent = ?");
    		$reponse->execute([$eventId]);
    		$lst=[];
    		while($ligne=$reponse->fetch()){
-  	  		$lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3],$ligne[4],$ligne[5]];
+  	  		$lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3],$ligne[4]];
+  		}
+   		$reponse->closeCursor();  
+   		return $lst;
+	}
+
+	public function listeNonParticipants($eventId){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("SELECT user.idUser,user.firstName,user.lastName, user.email,
+		user.phoneNumber from user where idUser != ALL(SELECT idUser from participants WHERE idEvent = ?);");
+   		$reponse->execute([$eventId]);
+   		$lst=[];
+   		while($ligne=$reponse->fetch()){
+  	  		$lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3],$ligne[4]];
   		}
    		$reponse->closeCursor();  
    		return $lst;
@@ -99,5 +135,7 @@ class DAO{
 		   if ($ligne=$reponse->fetch()) return true;
    		else return false;
 	}
+
+	
 
 }    

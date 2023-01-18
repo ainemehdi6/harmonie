@@ -45,7 +45,7 @@
                     <td>'.$event[1].'</td>
                     <td>'.$event[2].'</td>
                     <td>'.$event[4].'</td>
-                    <td>12/20</td>
+                    <td>'.$dao->NumberOfPresents($event[0]).'/'.$dao->NumberOfMembers().'</td>
                     <td><a href="EventDetail.php?idEvent='.$event[0].'"><i class="fa-solid fa-eye"></i></a>&nbsp&nbsp&nbsp&nbsp<a href="#" onclick="EditEventBoxOn'.$event[0].'()"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp&nbsp&nbsp&nbsp<a href="controllers/deleteEvent.php?idEvent='.$event[0].'"><i class="fa-solid fa-trash"></i></a></td>
                 </tr>          
         ';
