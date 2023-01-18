@@ -272,6 +272,10 @@ table {
 .problem-link {
     text-decoration: none;
 }
+/* CSS Button Menu Admin */
+.button_font a {
+    background-color: var(--blue);
+}
 
 
 
