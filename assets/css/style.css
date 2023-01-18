@@ -114,8 +114,15 @@ table td{
     margin: 20px;
     width: fit-content;
 }
-.overlay{
-    opacity: 0.4;
+.overlay:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.75);
+	z-index: 99;
 }
 .event-titre{
     font-size: 28px;
@@ -154,7 +161,7 @@ table td{
 	position: absolute;
 	top: -20px;
 	right: -20px;
-	color: #fff;
+	color: var(--black);
 	font-size: 22px;
 	cursor: pointer;
 }
@@ -167,6 +174,7 @@ table td{
 	position: relative;
 }
 .post-project h3 {
+    margin: 0;
 	float: left;
 	width: 100%;
 	background-color: var(--blue);
@@ -178,7 +186,7 @@ table td{
 }
 .post-project-fields {
 	float: left;
-	width: 88%;
+	width: 93%;
 	padding: 30px 20px;
 	background-color: #fff;
 }
@@ -189,16 +197,13 @@ table td{
 .post-project-fields form input {
 	padding: 0 15px;
 	height: 40px;
-}
-.post-project-fields form textarea {
-	padding: 15px;
-	height: 130px;
+    width: 93%;
 }
 .post-project-fields form input,
 .post-project-fields form textarea,
 .post-project-fields form select {
-	width: 100%;
-	color: #b2b2b2;
+	width: 93%;
+	color: var(--black);
 	font-size: 14px;
 	border: 1px solid #e5e5e5;
 	margin-bottom: 20px;

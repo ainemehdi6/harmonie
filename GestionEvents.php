@@ -20,7 +20,7 @@
 
     </style>
     <?php include_once('assets/models/header.html') ?>
-    <main>
+    <main id="main">
         <h1 class="center-text">Gestion des évènements</h1>
         <div class="btns-grp">
             <a href="#" class="btn btn-main" onclick="AddEventBoxOn()">Ajouter</a>
@@ -41,9 +41,9 @@
                 <td><input type="text" name="descriptin" value="description de l'évenement"></td>
                 <td>
                     <select name="statut">
-                        <option value="0">Encours</option>
-                        <option value="1">Suspendu</option>
-                        <option value="2">Terminer</option>
+                        <option value="0">En cours</option>
+                        <option value="1">Passé</option>
+                        <option value="2">Annulé</option>
                     </select>
                 </td>
                 <td>12/20</td>
@@ -51,32 +51,31 @@
             </tr>
         </table>
     </main>
-    <div class="post-popup job_post active" id="job_post">
+    <div class="post-popup job_post" id="job_post">
 			<div class="post-project">
 				<h3>Ajouter une évenement</h3>
 				<div class="post-project-fields">
-					<form action="controllers/addpost.php" method="post" enctype="multipart/form-data"> 
+					<form action="controllers/addEvent.php" method="post" enctype="multipart/form-data"> 
 						<div class="row">
 							<div class="col-lg-12">
-								<input type="text" name="title" placeholder="Title">
+								<input type="text" name="titre" placeholder="Titre d'événement">
 							</div>
 							<div class="col-lg-12">
-								<textarea name="description"  placeholder="Description"></textarea>
+                                <input type="text" name="description" placeholder="Description d'événement">
 							</div>
 							<div class="col-lg-12">
-								<p>Image</p>
-								<input type="file" name="image" id="image">
+								<input type="date" name="date">
 							</div>
 							<div class="col-lg-12">
 								<ul>
-									<li><input  class="active" name="submit" type="submit" value="post"></li>
-									<li><a href="#" title="">Cancel</a></li>
+									<li><button  class="active" name="submit" type="submit" value="post">Ajouter</button></li>
+									<li><button href="#" title="" type="cancel">Cancel</button></li>
 								</ul>
 							</div>
 						</div>
 					</form>
 				</div><!--post-project-fields end-->
-				<a href="#" title=""><i class="la la-times-circle-o"></i></a>
+				<a href="#" onclick="AddEventBoxOn()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12zm8.207-3.207a1 1 0 0 0-1.414 1.414L10.586 12l-1.793 1.793a1 1 0 1 0 1.414 1.414L12 13.414l1.793 1.793a1 1 0 0 0 1.414-1.414L13.414 12l1.793-1.793a1 1 0 0 0-1.414-1.414L12 10.586l-1.793-1.793z" fill="currentColor"/></g></svg></a>
 			</div><!--post-project end-->
 		</div><!--post-project-popup end-->
     <?php include_once('assets/models/footer.html') ?>

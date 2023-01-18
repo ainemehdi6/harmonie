@@ -76,28 +76,12 @@ class DAO{
    		return $lst;
 	}	
 
-	public function AddCoursMod($name,$id,$desc){
+	public function AddEvent($titre,$description,$date,$idAdmin){
 		$bdd=$this->connexion();
-		$reponse=$bdd->prepare("INSERT INTO CoursMod(name,Degreeid,description) values(?,?,?)");
-   		$reponse->execute([$name,$id,$desc]); 
+		$reponse=$bdd->prepare("INSERT INTO event(titre,description,date,idAdmin) values(?,?,?,?)");
+   		$reponse->execute([$titre,$description,$date,$idAdmin]); 
 		   if ($ligne=$reponse->fetch()) return true;
    		else return false;
-	}
-
-	public function UpdateCoursMod($name,$degid,$desc,$id){
-		$bdd=$this->connexion();
-		$reponse=$bdd->prepare("UPDATE CoursMod SET name=?, Degreeid=?, description=? WHERE id=?");
-   		$reponse->execute([$name,$degid,$desc,$id]); 
-		   if ($ligne=$reponse->fetch()) return true;
-   		else return false;
-	}
-
-	public function UpdateCours($name,$degid,$desc,$id){
-		$bdd=$this->connexion();
-		$reponse=$bdd->prepare("UPDATE Cours SET name=?, CoursModid=?, description=? WHERE id=?");
-   		$reponse->execute([$name,$degid,$desc,$id]); 
-		   if ($ligne=$reponse->fetch()) return true;
-   		else return false;
-	}
+	}	
 
 }    
