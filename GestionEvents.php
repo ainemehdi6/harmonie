@@ -4,7 +4,7 @@
     session_start();
     if(!isset($_SESSION['idAdmin']))
     {
-      header("location:../loginAdmin.php.php?erreur=2");
+      header("location:../loginAdmin.php?erreur=2");
     }
     include_once('DAO.php');
     $dao=new DAO();
@@ -46,7 +46,7 @@
                     <td>'.$event[2].'</td>
                     <td>'.$event[4].'</td>
                     <td>12/20</td>
-                    <td><a href="#"><i class="fa-solid fa-eye"></i></a>&nbsp&nbsp&nbsp&nbsp<a href="#" onclick="EditEventBoxOn'.$event[0].'()"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp&nbsp&nbsp&nbsp<a href="controllers/deleteEvent.php?idEvent='.$event[0].'"><i class="fa-solid fa-trash"></i></a></td>
+                    <td><a href="EventDetail.php?idEvent='.$event[0].'"><i class="fa-solid fa-eye"></i></a>&nbsp&nbsp&nbsp&nbsp<a href="#" onclick="EditEventBoxOn'.$event[0].'()"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp&nbsp&nbsp&nbsp<a href="controllers/deleteEvent.php?idEvent='.$event[0].'"><i class="fa-solid fa-trash"></i></a></td>
                 </tr>          
         ';
                 }

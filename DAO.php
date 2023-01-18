@@ -53,12 +53,12 @@ class DAO{
 	public function listeParticipants($eventId){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT event.idEvent,user.idUser,
-		user.firstName,user.lastName from user,event,participants where user.idUser = participants.idUser 
+		user.firstName,user.lastName, user.email,user.phoneNumber from user,event,participants where user.idUser = participants.idUser 
 		and event.idEvent=participants.idEvent and participants.idEvent = ?");
    		$reponse->execute([$eventId]);
    		$lst=[];
    		while($ligne=$reponse->fetch()){
-  	  		$lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3]];
+  	  		$lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3],$ligne[4],$ligne[5]];
   		}
    		$reponse->closeCursor();  
    		return $lst;
