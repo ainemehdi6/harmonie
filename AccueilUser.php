@@ -24,7 +24,7 @@
             </div>
 
             <div class="button_font">
-                <a href="#" class="button"> Changer code User</a>
+                <a href="#" class="button"> Changer mdp User</a>
             </div>
 
             <div class="button_font">
