@@ -41,7 +41,7 @@
             </div>
 
             <div class="deco">
-                <a href="#">Déconnexion </a>
+                <a href="controllers/logout.php">Déconnexion </a>
             </div>
         </div>
     </main>

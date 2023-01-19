@@ -5,6 +5,7 @@ function AddEventBoxOn() {
     var footer = document.getElementById("footer");
     popup.classList.toggle("active");
     main.classList.toggle("overlay");
+    footer.classList.toggle("overlay");
 }
 
 
