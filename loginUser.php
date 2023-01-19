@@ -38,7 +38,6 @@
         </form>
 
     </div>
-    <br><br>
     <?php include_once('assets/models/footer.html') ?>
 </body>
 
