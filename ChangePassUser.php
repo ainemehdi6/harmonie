@@ -33,15 +33,15 @@
     <div class="container">
         <div class="main">
             <h1>Changer mot de passe User</h1>
-            <form class="change-password" action="controllers/loginAdmin.php" method="POST">
+            <form class="change-password" action="controllers/ChangePassUser.php" method="POST">
                 <div class="input">
-                    <input type="password" name="ancienmdpadmin" placeholder="Ancien MDP User">
+                    <input type="password" name="olduserpw" placeholder="Ancien MDP User">
                 </div> <br>
                 <div class="input">
-                    <input type="password" name="newpassword" placeholder="Nouveau Mot de passe">
+                    <input type="password" name="newuserpassword" placeholder="Nouveau Mot de passe">
                 </div> <br>
                 <div class="input">
-                    <input type="password" name="newpassword" placeholder="Confirmer Mot de passe">
+                    <input type="password" name="cnewuserpassword" placeholder="Confirmer Mot de passe">
                 </div>
                 <div class="button">
                     <button type="submit">Valider changement</button>
@@ -52,5 +52,6 @@
 </div>
     <?php include_once('assets/models/footer.html') ?>
 </body>
+<?php var_dump($_SESSION['idAdmin']);?>
 
 </html>
