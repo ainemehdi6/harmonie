@@ -24,7 +24,7 @@
     <hr>
     <div class="container">
         <div class="main">
-            <h1>Connexion</h1>
+            <h1 class="title">Connexion</h1>
             <form action="controllers/loginUser.php" method="POST">
                 <div class="input">
                     <input type="password" name="password" placeholder="Entrer le mot de passe">

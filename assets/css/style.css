@@ -777,3 +777,7 @@ job_post.post-popup,
     flex-direction: column;
     align-items: center;
 }
+
+.title{
+    text-align: center;
+}
