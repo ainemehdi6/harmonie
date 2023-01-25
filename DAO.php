@@ -166,7 +166,15 @@ class DAO{
            $reponse->execute([$newpassword,$idAdmin]); 
            if ($ligne=$reponse->fetch()) return true;
            else return false;
-	}	   
+	}	  
+	
+	public function ChangeUserPass($password){
+        $bdd=$this->connexion();
+        $reponse=$bdd->prepare("UPDATE memberspassword set password=?");
+           $reponse->execute([$password]); 
+           if ($ligne=$reponse->fetch()) return true;
+           else return false;
+	}	
 	
 
 }    

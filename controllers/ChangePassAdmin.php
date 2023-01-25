@@ -7,7 +7,7 @@
 	include('../DAO.php');
 	$dao=new DAO();
 	if($dao->ChangeAdminPass($newpw,$idAdmin)){
-		header("location:../GestionEvents.php");
+		header("location:../MenuAdmin.php");
 	}else{
 		header("location:../GestionEvents.php?erreur=2");
 		die();
