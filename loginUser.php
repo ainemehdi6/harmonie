@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header >
+    <header>
         <div class="header_top">
             <img src="assets/images/logo.jpeg" alt="logo Harmonie">
             <a href="loginAdmin.php"><i class="fa-solid fa-gear"></i></a>
@@ -24,18 +24,19 @@
     <hr>
     <div class="container">
         <div class="main">
-            <h1>Connexion</h1>
+            <h1 class="title">Connexion</h1>
             <form action="controllers/loginUser.php" method="POST">
                 <div class="input">
-                    <input type="password" name="password" placeholder="Entrer le mot de passe">placeholder="Entrer le mot de passe">placeholder="Entrer le mot de passe">
+                    <input type="password" name="password" placeholder="Entrer le mot de passe">
                 </div>
                 <div class="button">
                     <button type="submit">Se connecter</button>
                 </div>
-                
+
                 <a href="" class="problem-link">Problème de <br> connexion ?</a>
+            </form>
         </div>
-        </form>
+
 
     </div>
     <?php include_once('assets/models/footer.html') ?>
