@@ -8,5 +8,4 @@
 		header("location:../loginUser.php?erreur=2");
 		die();
 	}
-
-?>placeholder="Entrer le mot de passe">placeholder="Entrer le mot de passe">placeholder="Entrer le mot de passe">placeholder="Entrer le mot de passe">placeholder="Entrer le mot de passe">
+?>
