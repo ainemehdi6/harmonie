@@ -25,23 +25,23 @@
     <main style="display:flex;">
         <div class="buttons" style="margin:50px auto 0 auto;">
             <div class="button_font">
-                <a href="#" class="button" > Gestion des membres</a>
+                <a style="text-decoration: none;" href="UsersList.php" class="button" > Gestion des membres</a>
             </div>
 
             <div class="button_font">
-                <a href="gestionEvents.php" class="button"> Gestion des évènements</a>
+                <a style="text-decoration: none;" href="gestionEvents.php" class="button"> Gestion des évènements</a>
             </div>
 
             <div class="button_font">
-                <a href="ChangePassUser.php" class="button"> Changer mdp User</a>
+                <a style="text-decoration: none;" href="ChangePassUser.php" class="button"> Changer mdp User</a>
             </div>
 
             <div class="button_font">
-                <a href="ChangePassAdmin.php" class="button"> Changer mdp Admin</a>
+                <a style="text-decoration: none;" href="ChangePassAdmin.php" class="button"> Changer mdp Admin</a>
             </div>
 
             <div class="deco">
-                <a href="controllers/logout.php">Déconnexion </a>
+                <a  href="controllers/logout.php">Déconnexion </a>
             </div>
         </div>
     </main>

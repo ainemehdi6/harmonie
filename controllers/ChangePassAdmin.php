@@ -6,11 +6,23 @@
     $idAdmin = $_SESSION['idAdmin']; 
 	include('../DAO.php');
 	$dao=new DAO();
-	if($dao->ChangeAdminPass($newpw,$idAdmin)){
-		header("location:../MenuAdmin.php");
-	}else{
-		header("location:../GestionEvents.php?erreur=2");
-		die();
-	}
+    if($newpw == $cpw){
+        if($dao->getAdminPassword($idAdmin) == $oldpw){
+            if($dao->ChangeAdminPass($newpw,$idAdmin)){
+                header("location:../MenuAdmin.php");
+            }else{
+                header("location:../MenuAdmin.php?erreur=2");
+                die();
+            }
+        }else{
+            header("location:../ChangePassAdmin.php?erreur=3");
+                die();
+        }
+    }else{
+        header("location:../ChangePassAdmin.php?erreur=4");
+                die();
+    }
+   
+	
 
 ?>

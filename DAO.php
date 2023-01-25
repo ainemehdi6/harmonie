@@ -39,6 +39,28 @@ class DAO{
    		return $resultstring;
 	}
 
+	public function getUserPassword(){
+		$con = mysqli_connect('127.0.0.1','root','','harmonie');
+		mysqli_select_db($con,"harmonie");
+		$sql="select password from memberspassword";
+		$query = mysqli_query($con,$sql);
+		$result = mysqli_fetch_assoc($query);
+		$resultstring = $result['password'];
+		mysqli_close($con); 
+   		return $resultstring;
+	}
+
+	public function getAdminPassword($idAdmin){
+		$con = mysqli_connect('127.0.0.1','root','','harmonie');
+		mysqli_select_db($con,"harmonie");
+		$sql="select password from admin where idAdmin=$idAdmin";
+		$query = mysqli_query($con,$sql);
+		$result = mysqli_fetch_assoc($query);
+		$resultstring = $result['password'];
+		mysqli_close($con); 
+   		return $resultstring;
+	}
+
 	public function authentificationUser($email,$password){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT * from admin where email= ? and password = ?");
@@ -178,7 +200,14 @@ class DAO{
            if ($ligne=$reponse->fetch()) return true;
            else return false;
 	}	  
-	
+	public function AddUser($nom,$prenom,$email,$numero,$role){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("INSERT INTO user(lastName,firstName,email,phoneNumber,role) values(?,?,?,?,?)");
+   		$reponse->execute([$nom,$prenom,$email,$numero,$role]); 
+		   if ($ligne=$reponse->fetch()) return true;
+   		else return false;
+	}
+
 	public function ChangeUserPass($password){
         $bdd=$this->connexion();
         $reponse=$bdd->prepare("UPDATE memberspassword set password=?");
@@ -186,6 +215,8 @@ class DAO{
            if ($ligne=$reponse->fetch()) return true;
            else return false;
 	}	
+	
+	}
 	
 
 }    

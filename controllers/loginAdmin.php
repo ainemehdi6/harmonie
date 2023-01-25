@@ -10,7 +10,7 @@
             $idAdmin=$in[0];
         }
         $_SESSION['idAdmin']=$idAdmin; 
-		header("location:../GestionEvents.php");
+		header("location:../MenuAdmin.php");
 	}else{
 		header("location:../loginAdmin.php?erreur=2");
 		die();
