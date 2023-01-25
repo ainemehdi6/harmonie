@@ -47,5 +47,5 @@ CREATE TABLE `memberspassword` (
 );
 
 INSERT INTO `memberspassword` (`password`) VALUES
-(''),
+
 ('password');
