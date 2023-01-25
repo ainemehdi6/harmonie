@@ -36,6 +36,14 @@ class DAO{
    		else return false;
 	}
 
+	public function Globalauthentification($password){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("SELECT * from memberspassword where password = ?");
+   		$reponse->execute([$password]);
+   		if ($ligne=$reponse->fetch()) return true;
+   		else return false;
+	}
+
 	public function User($email){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT idAdmin from admin where email= ?");

@@ -85,18 +85,19 @@ footer{
 table td{
     height: 30px;
 }
-.button{
-    border-radius: 20px;
-    padding: 5px;
+.btn{
+    border-radius: 10px;
+    padding: 10px;
     margin: 10px;
     text-decoration: none;
+    width: fit-content;
 }
-.button-present{
+.btn-present{
     background-color: var(--blue);
     color: var(--white);
     border: solid 1px  var(--blue);
 }
-.button-absent{
+.btn-absent{
     background-color: var(--white);
     color: var(--orange);
     border: solid 1px var(--orange);

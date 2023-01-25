@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-    session_start();
-    if(!isset($_SESSION['idAdmin']))
-    {
-      header("location:loginAdmin.php.php?erreur=2");
-    }
     include_once('DAO.php');
     $dao=new DAO();
 ?>
@@ -33,9 +28,9 @@
             foreach($listEvent as $event){
               echo'
                 <tr>
-                  <td>'.$event[3].'</td>
-                  <td>'.$event[1].'</td>
-                  <td>'.$event[2].'</td>
+                  <td><a href="EventPage.php?eventId='.$event[0].'">'.$event[3].'</a></td>
+                  <td><a href="EventPage.php?eventId='.$event[0].'">'.$event[1].'</a></td>
+                  <td><a href="EventPage.php?eventId='.$event[0].'">'.$event[2].'</a></td>
                 </tr>';
             }
           ?>

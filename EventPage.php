@@ -42,16 +42,16 @@
             <th>Présence</th>
           </tr>
           <?php
-          $listParticipants = $dao->listeParticipants($eventId);
-          foreach($listParticipants as $participant)
+           $listeUsers = $dao->listeUsers();
+          foreach($listeUsers as $user)
           {
             echo'
               <tr>
-                <td>'.$participant[3].'</td>
-                <td>'.$participant[2].'</td>
+                <td>'.$user[3].'</td>
+                <td>'.$user[2].'</td>
                 <td>
-                    <a href="#'.$participant[0].'" class="button button-present">Présent</a>
-                    <a href="#'.$participant[0].'" class="button button-absent">Absent</a>
+                    <a href="#'.$user[0].'" class="button button-present">Présent</a>
+                    <a href="#'.$user[0].'" class="button button-absent">Absent</a>
                 </td>
               </tr>
 

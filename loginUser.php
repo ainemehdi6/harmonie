@@ -25,9 +25,9 @@
     <div class="container">
         <div class="main">
             <h1>Connexion</h1>
-            <form action="" method="POST">
+            <form action="controllers/loginUser.php" method="POST">
                 <div class="input">
-                    <input type="password" name="password">
+                    <input type="password" name="password" placeholder="Entrer le mot de passe">placeholder="Entrer le mot de passe">placeholder="Entrer le mot de passe">
                 </div>
                 <div class="button">
                     <button type="submit">Se connecter</button>
