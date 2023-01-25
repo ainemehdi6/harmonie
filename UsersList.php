@@ -49,8 +49,8 @@ $dao = new DAO();
       foreach ($listUsers as $user) {
         echo '
                 <tr>
-                  <td>' . $user[1] . '</td>
                   <td>' . $user[2] . '</td>
+                  <td>' . $user[1] . '</td>
                   <td>' . $user[4] . '</td>
                   <td>' . $user[3] . '</td>
                   <td> </td>
