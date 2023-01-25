@@ -6,7 +6,7 @@
     $idAdmin = $_SESSION['idAdmin']; 
 	include('../DAO.php');
 	$dao=new DAO();
-	if($dao->ChangePassAdmin($newpw,$idAdmin)){
+	if($dao->ChangeAdminPass($newpw,$idAdmin)){
 		header("location:../GestionEvents.php");
 	}else{
 		header("location:../GestionEvents.php?erreur=2");
