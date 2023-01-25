@@ -3,7 +3,7 @@
     session_start();
     if(!isset($_SESSION['idAdmin']))
     {
-      header("location:../loginAdmin.php.php?erreur=2");
+      header("location:loginAdmin.php.php?erreur=2");
     }
     include_once('DAO.php');
     $dao=new DAO();
@@ -33,11 +33,11 @@
             </div>
 
             <div class="button_font">
-                <a href="#" class="button"> Changer mdp User</a>
+                <a href="ChangePassUser.php" class="button"> Changer mdp User</a>
             </div>
 
             <div class="button_font">
-                <a href="#" class="button"> Changer mdp Admin</a>
+                <a href="ChangePassAdmin.php" class="button"> Changer mdp Admin</a>
             </div>
 
             <div class="deco">
@@ -45,6 +45,7 @@
             </div>
         </div>
     </main>
+    <br><br><br><br><br><br>
     <?php include_once('assets/models/footer.html') ?>
 </body>
 

@@ -4,14 +4,14 @@
     session_start();
     if(!isset($_SESSION['idAdmin']))
     {
-      header("location:../loginAdmin.php?erreur=2");
+      header("location:loginAdmin.php?erreur=2");
     }
     if(isset($_GET['idEvent']))
     {
       $idEvent=$_GET['idEvent'];
     }
     else{
-        header("location:../GestionEvents.php?erreur=2");
+        header("location:GestionEvents.php?erreur=2");
     }
     include_once('DAO.php');
     $dao=new DAO();
