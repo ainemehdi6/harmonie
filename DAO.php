@@ -108,6 +108,22 @@ class DAO{
    		return $lst;
 	}
 
+	public function addParticipant($iduser,$idEvent){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("INSERT INTO participants(idUser,idEvent) values(?,?)");
+   		$reponse->execute([$iduser,$idEvent]); 
+		   if ($ligne=$reponse->fetch()) return true;
+   		else return false;
+	}
+
+	public function removeParticipant($iduser,$idEvent){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("DELETE from participants where idUser=? and idEvent=?");
+   		$reponse->execute([$iduser,$idEvent]); 
+		   if ($ligne=$reponse->fetch()) return true;
+   		else return false;
+	}
+
 	public function EventById($id){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT * from event where idEvent= ?");
