@@ -151,6 +151,14 @@ class DAO{
            if ($ligne=$reponse->fetch()) return true;
            else return false;
 	}	   
+	public function AddUser($nom,$prenom,$email,$numero,$role){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("INSERT INTO user(lastName,firstName,email,phoneNumber,role) values(?,?,?,?,?)");
+   		$reponse->execute([$nom,$prenom,$email,$numero,$role]); 
+		   if ($ligne=$reponse->fetch()) return true;
+   		else return false;
+
+	}
 	
 
 }    
