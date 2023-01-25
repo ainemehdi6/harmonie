@@ -144,6 +144,13 @@ class DAO{
    		else return false;
 	}
 
+	public function ChangeAdminPass($idAdmin,$newpassword){
+        $bdd=$this->connexion();
+        $reponse=$bdd->prepare("UPDATE admin set password=? where idAdmin=?");
+           $reponse->execute([$newpassword,$idAdmin]); 
+           if ($ligne=$reponse->fetch()) return true;
+           else return false;
+	}	   
 	
 
 }    

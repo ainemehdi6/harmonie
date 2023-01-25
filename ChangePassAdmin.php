@@ -33,15 +33,15 @@
     <div class="container">
         <div class="main">
             <h1>Changer mot de passe Admin</h1>
-            <form class="change-password" action="controllers/loginAdmin.php" method="POST">
+            <form class="change-password" action="controllers/ChangePassAdmin.php" method="POST">
                 <div class="input">
-                    <input type="password" name="ancienmdpadmin" placeholder="Ancien MDP Admin">
+                    <input type="password" name="oldpass" placeholder="Ancien MDP Admin">
                 </div> <br>
                 <div class="input">
-                    <input type="password" name="newpassword" placeholder="Nouveau Mot de passe">
+                    <input type="password" name="newpass" placeholder="Nouveau Mot de passe">
                 </div> <br>
                 <div class="input">
-                    <input type="password" name="newpassword" placeholder="Confirmer Mot de passe">
+                    <input type="password" name="cpass" placeholder="Confirmer Mot de passe">
                 </div>
                 <div class="button">
                     <button type="submit">Valider changement</button>
