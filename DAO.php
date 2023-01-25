@@ -215,8 +215,4 @@ class DAO{
            if ($ligne=$reponse->fetch()) return true;
            else return false;
 	}	
-	
-	}
-	
-
 }    

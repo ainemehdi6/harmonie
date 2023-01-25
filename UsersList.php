@@ -20,7 +20,7 @@ $dao = new DAO();
   <?php include_once('assets/models/header.html') ?>
 
 
-  <main>
+  <main id="main">
     <h2 class="center-text">Liste des utilisateurs</h2>
     <div class="buttons_listusers">
 
@@ -29,7 +29,7 @@ $dao = new DAO();
       </div>
       
         <div class="btns-grp">
-          <a href="#" class="btn btn-main" onclick="AddEventBoxOn()">Ajouter</a>
+          <a href="#" class="btn btn-main" onclick="AddUserBoxOn()">Ajouter</a>
         </div>
 
       
@@ -94,7 +94,7 @@ $dao = new DAO();
 						</div>
 					</form>
 				</div><!--post-project-fields end-->
-				<a href="#" onclick="AddEventBoxOn()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12zm8.207-3.207a1 1 0 0 0-1.414 1.414L10.586 12l-1.793 1.793a1 1 0 1 0 1.414 1.414L12 13.414l1.793 1.793a1 1 0 0 0 1.414-1.414L13.414 12l1.793-1.793a1 1 0 0 0-1.414-1.414L12 10.586l-1.793-1.793z" fill="currentColor"/></g></svg></a>
+				<a href="#" onclick="AddUserBoxOn()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12zm8.207-3.207a1 1 0 0 0-1.414 1.414L10.586 12l-1.793 1.793a1 1 0 1 0 1.414 1.414L12 13.414l1.793 1.793a1 1 0 0 0 1.414-1.414L13.414 12l1.793-1.793a1 1 0 0 0-1.414-1.414L12 10.586l-1.793-1.793z" fill="currentColor"/></g></svg></a>
 			</div><!--post-project end-->
 		</div><!--post-project-popup end-->
 
