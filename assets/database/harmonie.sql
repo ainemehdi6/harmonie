@@ -41,3 +41,11 @@ CREATE TABLE `participants` (
   `idUser` int DEFAULT NULL,
   `idEvent` int DEFAULT NULL
 ) ;
+
+CREATE TABLE `memberspassword` (
+  `password` varchar(50) NOT NULL
+);
+
+INSERT INTO `memberspassword` (`password`) VALUES
+(''),
+('password');

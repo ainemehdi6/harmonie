@@ -50,8 +50,8 @@
                 <td>'.$user[3].'</td>
                 <td>'.$user[2].'</td>
                 <td>
-                    <a href="#'.$user[0].'" class="button button-present">Présent</a>
-                    <a href="#'.$user[0].'" class="button button-absent">Absent</a>
+                    <a href="#'.$user[0].'" class="btn btn-present">Présent</a>
+                    <a href="#'.$user[0].'" class="btn btn-absent">Absent</a>
                 </td>
               </tr>
 
@@ -63,5 +63,4 @@
     </main>
     <?php include_once('assets/models/footer.html') ?>
 </body>
-
 </html>
