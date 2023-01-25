@@ -51,7 +51,7 @@
                 <td>'.$user[2].'</td>
                 <td>
                     
-                    <a href="controllers/markPresence.php?userId='.$user[0].'&eventId='.$eventId.'&type=present" class="btn btn-present">Présent</a>
+                    <a ';if($dao->UserIsPresent($user[0],$eventId)=="0"){echo 'href="controllers/markPresence.php?userId='.$user[0].'&eventId='.$eventId.'&type=present"';}else{echo'href=""  role="link" aria-disabled="true" style="color: currentColor;cursor: not-allowed;opacity: 0.5;text-decoration: none;"';};  echo'class="btn btn-present">Présent</a>
                     <a href="controllers/markPresence.php?userId='.$user[0].'&eventId='.$eventId.'&type=abs" class="btn btn-absent">Absent</a>
                 </td>
               </tr>
