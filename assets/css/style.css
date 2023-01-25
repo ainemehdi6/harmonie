@@ -771,13 +771,14 @@ job_post.post-popup,
 }
 
 
-/* CSS formulaire change password */
+/* CSS formulaire change password PP*/
 .change-password{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* CSS formulaire change password PP*/
 .title{
     text-align: center;
 }
