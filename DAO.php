@@ -28,6 +28,28 @@ class DAO{
    		return $resultstring;
 	}
 
+	public function getUserPassword(){
+		$con = mysqli_connect('127.0.0.1','root','','harmonie');
+		mysqli_select_db($con,"harmonie");
+		$sql="select password from memberspassword";
+		$query = mysqli_query($con,$sql);
+		$result = mysqli_fetch_assoc($query);
+		$resultstring = $result['password'];
+		mysqli_close($con); 
+   		return $resultstring;
+	}
+
+	public function getAdminPassword($idAdmin){
+		$con = mysqli_connect('127.0.0.1','root','','harmonie');
+		mysqli_select_db($con,"harmonie");
+		$sql="select password from admin where idAdmin=$idAdmin";
+		$query = mysqli_query($con,$sql);
+		$result = mysqli_fetch_assoc($query);
+		$resultstring = $result['password'];
+		mysqli_close($con); 
+   		return $resultstring;
+	}
+
 	public function authentificationUser($email,$password){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT * from admin where email= ? and password = ?");
