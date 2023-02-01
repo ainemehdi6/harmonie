@@ -185,6 +185,14 @@ class DAO{
    		else return false;
 	}
 
+	public function deleteUser($idUser){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("DELETE from user where idUser=?");
+   		$reponse->execute([$idUser]); 
+		   if ($ligne=$reponse->fetch()) return true;
+   		else return false;
+	}
+
 	public function EditEvent($titre,$description,$date,$statut,$idEvent){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("UPDATE event set titre=?,description=?,date=?,statut=? where idEvent=?");

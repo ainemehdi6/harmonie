@@ -45,6 +45,7 @@ $dao = new DAO();
         <th>Action</th>
       </tr>
       <?php
+
       $listUsers = $dao->listeUsers();
       foreach ($listUsers as $user) {
         echo '
@@ -57,6 +58,7 @@ $dao = new DAO();
                   
                 </tr>';
       }
+
       ?>
     </table>
 
