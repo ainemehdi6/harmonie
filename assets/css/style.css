@@ -768,9 +768,14 @@ job_post.post-popup,
 
 
 
-/* CSS formulaire change password */
-.change-password{
+/* CSS formulaire change password PhilippeP*/
+.change-password {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+/* CSS FORMULAIRE MODIFICATION PROFIL ADMIN */
+.input-form-editprofiladmin {
+    padding: 0.8rem 2rem;
+    border-radius: 0.8rem;
 }

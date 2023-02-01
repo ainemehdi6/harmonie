@@ -33,11 +33,11 @@
             </div>
 
             <div class="button_font">
-                <a style="text-decoration: none;" href="ChangePassUser.php" class="button"> Changer mdp User</a>
+                <a style="text-decoration: none;" href="ChangePassUser.php" class="button"> Changer MDP User</a>
             </div>
 
             <div class="button_font">
-                <a style="text-decoration: none;" href="ChangePassAdmin.php" class="button"> Changer mdp Admin</a>
+                <a style="text-decoration: none;" href="ChangePassAdmin.php" class="button"> Changer Profil Admin</a>
             </div>
 
             <div class="deco">
