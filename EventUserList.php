@@ -15,24 +15,22 @@
 <body>
     <?php include_once('assets/models/header.html') ?>
     <main>
-        <h2 class="center-text">Liste des événements</h2>
+        <h2 class="center-text">Liste des Membres</h2>
         <div class="btns-grp">
-            <a href="EventUserList.php" class="btn btn-main">Liste des événements par nom</a>
+            <a href="eventsList.php" class="btn btn-main">Liste des événements</a>
         </div>
         <table>
           <tr>
-            <th>Date</th>
             <th>Nom</th>
-            <th>Description</th>
+            <th>Prénom</th>
           </tr>
           <?php 
-            $listEvent = $dao->listeEvents();
-            foreach($listEvent as $event){
+            $listUsers = $dao->listeUsers();
+            foreach($listUsers as $user){
               echo'
                 <tr>
-                  <td><a href="EventPage.php?eventId='.$event[0].'">'.$event[3].'</a></td>
-                  <td><a href="EventPage.php?eventId='.$event[0].'">'.$event[1].'</a></td>
-                  <td><a href="EventPage.php?eventId='.$event[0].'">'.$event[2].'</a></td>
+                  <td><a href="markPresencebyName.php?userId='.$user[0].'">'.$user[2].'</a></td>
+                  <td><a href="markPresencebyName.php?userId='.$user[0].'">'.$user[1].'</a></td>
                 </tr>';
             }
           ?>
