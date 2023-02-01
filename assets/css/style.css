@@ -506,12 +506,15 @@ form{
     display: flex;
   
 }
-button{
+button {
     margin: 4px auto auto auto;
-    background-color: var(--blue);  
+    background-color: var(--blue);
     color: white;
-    width: 200px;
-    padding: 5px;
+    width: 235px;
+    /* padding: 5px; */
+    padding-bottom: 0.7rem;
+    padding-top: 0.7rem;
+    margin-top: 1rem;
     border-radius: 10px;
 }
 .input{
@@ -520,7 +523,8 @@ button{
 input{
     margin: auto;
     background-color: var(--gray);
-    padding: 5px;
+    padding: 0.8rem 2rem;
+    border-radius: 0.8rem;
 }
 .probleme{
     display: flex;
@@ -780,3 +784,10 @@ job_post.post-popup,
     padding: 0.8rem 2rem;
     border-radius: 0.8rem;
 }
+/* Label modif form admin */
+.label-info{
+    margin-bottom: none;
+    font-size: 15px;
+    text-align: center;
+}
+

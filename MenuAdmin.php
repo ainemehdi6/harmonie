@@ -37,7 +37,11 @@
             </div>
 
             <div class="button_font">
-                <a style="text-decoration: none;" href="ChangePassAdmin.php" class="button"> Changer Profil Admin</a>
+                <a style="text-decoration: none;" href="ChangePassAdmin.php" class="button"> Modifier MDP Admin</a>
+            </div>
+
+            <div class="button_font">
+                <a style="text-decoration: none;" href="EditProfilAdmin.php" class="button"> Modifier Profil Admin</a>
             </div>
 
             <div class="deco">
