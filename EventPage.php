@@ -52,7 +52,7 @@
                 <td>
                     
                     <a ';if($dao->UserIsPresent($user[0],$eventId)=="0"){echo 'href="controllers/markPresence.php?userId='.$user[0].'&eventId='.$eventId.'&type=present"';}else{echo'href=""  role="link" aria-disabled="true" style="color: currentColor;cursor: not-allowed;opacity: 0.5;text-decoration: none; background-color:green; border:green;color:white;"';};  echo'class="btn btn-present">Présent</a>
-                    <a href="controllers/markPresence.php?userId='.$user[0].'&eventId='.$eventId.'&type=abs" class="btn btn-absent"'; if($dao->UserIsPresent($user[0],$eventId)=="0"){}echo'>Absent</a>
+                    <a href="controllers/markPresence.php?userId='.$user[0].'&eventId='.$eventId.'&type=abs" class="btn btn-absent"';  echo'>Absent</a>
                 </td>
               </tr>
 
