@@ -200,6 +200,13 @@ class DAO{
 		   if ($ligne=$reponse->fetch()) return true;
    		else return false;
 	}
+	public function EditUser($Nom,$prenom,$email,$numero,$role,$idUser){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("UPDATE user set firstName=?,lastName=?,email=?,phoneNumber=? ,role=? where idUser=?");
+   		$reponse->execute([$prenom,$Nom,$email,$numero,$role,$idUser]); 
+		   if ($ligne=$reponse->fetch()) return true;
+   		else return false;
+	}
 
 	public function ChangeAdminPass($newpassword,$idAdmin){
         $bdd=$this->connexion();
