@@ -7,7 +7,7 @@
     session_start();
 	include('../DAO.php');
 	$dao=new DAO();
-	if($dao->AddUser($nom,$prenom,$email,$role,$numero)){
+	if($dao->AddUser($nom,$prenom,$email,$numero,$role)){
 		header("location:../UsersList.php");
 	}else{
 		header("location:../UsersList.php?erreur=2");

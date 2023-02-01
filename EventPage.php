@@ -37,8 +37,8 @@
         
         <table>
           <tr>
-            <th>Prénom</th>
             <th>Nom</th>
+            <th>Prénom</th>
             <th>Présence</th>
           </tr>
           <?php
@@ -47,12 +47,12 @@
           {
             echo'
               <tr>
-                <td>'.$user[3].'</td>
                 <td>'.$user[2].'</td>
+                <td>'.$user[1].'</td>
                 <td>
                     
-                    <a href="controllers/markPresence.php?userId='.$user[0].'&eventId='.$eventId.'&type=present" class="btn btn-present">Présent</a>
-                    <a href="controllers/markPresence.php?userId='.$user[0].'&eventId='.$eventId.'&type=abs" class="btn btn-absent">Absent</a>
+                    <a ';if($dao->UserIsPresent($user[0],$eventId)=="0"){echo 'href="controllers/markPresence.php?userId='.$user[0].'&eventId='.$eventId.'&type=present"';}else{echo'href=""  role="link" aria-disabled="true" style="color: currentColor;cursor: not-allowed;opacity: 0.5;text-decoration: none; background-color:green; border:green;color:white;"';};  echo'class="btn btn-present">Présent</a>
+                    <a href="controllers/markPresence.php?userId='.$user[0].'&eventId='.$eventId.'&type=abs" class="btn btn-absent"'; if($dao->UserIsPresent($user[0],$eventId)=="0"){}echo'>Absent</a>
                 </td>
               </tr>
 

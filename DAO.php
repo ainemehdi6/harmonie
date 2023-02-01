@@ -17,6 +17,17 @@ class DAO{
    		return $resultstring;
 	}
 
+	public function UserIsPresent($idUser,$idEvent){
+		$con = mysqli_connect('127.0.0.1','root','','harmonie');
+		mysqli_select_db($con,"harmonie");
+		$sql="select count(idUser) from participants where idEvent=$idEvent and idUser=$idUser";
+		$query = mysqli_query($con,$sql);
+		$result = mysqli_fetch_assoc($query);
+		$resultstring = $result['count(idUser)'];
+		mysqli_close($con); 
+   		return $resultstring;
+	}
+
 	public function NumberOfMembers(){
 		$con = mysqli_connect('127.0.0.1','root','','harmonie');
 		mysqli_select_db($con,"harmonie");
@@ -204,5 +215,4 @@ class DAO{
            if ($ligne=$reponse->fetch()) return true;
            else return false;
 	}	
-	
 }    
