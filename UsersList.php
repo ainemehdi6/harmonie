@@ -45,6 +45,7 @@ $dao = new DAO();
         <th>Action</th>
       </tr>
       <?php
+
       $listUsers = $dao->listeUsers();
       foreach ($listUsers as $user) {
         echo '
@@ -53,10 +54,11 @@ $dao = new DAO();
                   <td>' . $user[1] . '</td>
                   <td>' . $user[4] . '</td>
                   <td>' . $user[3] . '</td>
-                  <td><a href="#" onclick="EditUserBoxOn' . $user[0] . '()"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp&nbsp&nbsp&nbsp<a href="controllers/deleteEvent.php?idEvent=' . $user[0] . '"><i class="fa-solid fa-trash"></i></a></td>
+                  <td><a href="" onclick="EditUserBoxOn' . $user[0] . '()"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp&nbsp&nbsp&nbsp<a href="controllers/deleteEvent.php?idEvent=' . $user[0] . '"><i class="fa-solid fa-trash"></i></a></td>
                   
                 </tr>';
       }
+
       ?>
     </table>
 
