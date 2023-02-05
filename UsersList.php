@@ -23,10 +23,13 @@ $dao = new DAO();
   <main id="main">
     <h2 class="center-text">Liste des utilisateurs</h2>
     <div class="buttons_listusers">
-
-      <div class="btns-grp">
-        <a href="#" class="btn btn-main">importer</a>
+<form action="" method="POST" enctype="multipart/form-data">
+  <input type="file" name="import_file">
+   <div class="btns-grp">
+        <a href="controllers/importer.php" class="btn btn-main">importer</a>
       </div>
+</form>
+     
       
         <div class="btns-grp">
           <a href="#" class="btn btn-main" onclick="AddUserBoxOn()">Ajouter</a>

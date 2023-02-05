@@ -230,4 +230,19 @@ class DAO{
            if ($ligne=$reponse->fetch()) return true;
            else return false;
 	}	
+
+	public function exporter(){
+		header('Content-Type: application/xls;');
+		header('Content-Disposition:attachement;filename=ListeUser.xls');
+		$bdd=$this->connexion();
+		$response=$bdd->prepare("SELECT*FROM user ");
+		$response->execute();
+		$data= $response->fetchAll();
+
+	    foreach($data as $d){
+			echo '"'.$d->Firstname.'";"'.$d->Lastname.'";"'.$d->email.'";"'.$d->phoneNumber.'";"'.$d->role.'"'."\n";
+		}
+
+	}
+	
 }    
