@@ -23,10 +23,16 @@ $dao = new DAO();
   <main id="main">
     <h2 class="center-text">Liste des utilisateurs</h2>
     <div class="buttons_listusers">
-<form action="" method="POST" enctype="multipart/form-data">
-  <input type="file" name="import_file">
+<form class="upload" action="" method="POST" enctype="multipart/form-data">
+  <label for="file-input">
+  <div class="custom-file-upload">
+    <i class="fa fa-cloud-upload"></i> Choose File
+  </div>
+</label>
+<input id="file-input" type="file" style="display:none;" />
+
    <div class="btns-grp">
-        <a href="controllers/importer.php" class="btn btn-main">importer</a>
+        <a href="controllers/importer.php" class="btn btn-main">exporter</a>
       </div>
 </form>
      
