@@ -1,11 +1,11 @@
 <?php
-	$oldpw=$_POST['oldpass'];
+    $oldpw=$_POST['oldpass'];
     $newpw=$_POST['newpass'];
-	$cpw=$_POST['cpass'];
+    $cpw=$_POST['cpass'];
     session_start();
     $idAdmin = $_SESSION['idAdmin']; 
-	include('../DAO.php');
-	$dao=new DAO();
+    include('../DAO.php');
+    $dao=new DAO();
     if($newpw == $cpw){
         if($dao->getAdminPassword($idAdmin) == $oldpw){
             if($dao->ChangeAdminPass($newpw,$idAdmin)){
@@ -23,6 +23,6 @@
                 die();
     }
    
-	
+    
 
 ?>

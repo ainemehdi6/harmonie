@@ -114,7 +114,7 @@ $dao = new DAO();
                             <form action="controllers/editUser.php" method="post" enctype="multipart/form-data"> 
                                 <div class="row">
                                 <div class="col-lg-12">             
-                                  <input type="text" name="idUser" value="'.$user[0].'">
+                                  <input type="hidden" name="idUser" value="'.$user[0].'" >
                                   <input type="text" name="nom" placeholder="nom" value="'.$user[2].'" required>
                                 </div> 
                                 <div class="col-lg-12">

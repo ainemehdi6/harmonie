@@ -61,6 +61,18 @@ class DAO{
    		return $resultstring;
 	}
 
+	public function getAdminProfil($idAdmin){
+		   $bdd=$this->connexion();
+		   $reponse=$bdd->prepare("SELECT * from admin where idAdmin=$idAdmin");
+			  $reponse->execute([]);
+			  $lst=[];
+			  while($ligne=$reponse->fetch()){
+				   $lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3],$ligne[4],$ligne[5]];
+			 }
+			  $reponse->closeCursor();  
+			  return $lst;
+	   }
+
 	public function authentificationUser($email,$password){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT * from admin where email= ? and password = ?");
@@ -215,6 +227,13 @@ class DAO{
            if ($ligne=$reponse->fetch()) return true;
            else return false;
 	}	  
+	public function EditProfilAdmin($firstName,$lastName,$email,$phoneNumber,$idAdmin){
+        $bdd=$this->connexion();
+        $reponse=$bdd->prepare("UPDATE admin set firstName=?,lastName=?,email=?,phoneNumber=? where idAdmin=?");
+           $reponse->execute([$firstName,$lastName,$email,$phoneNumber,$idAdmin]); 
+           if ($ligne=$reponse->fetch()) return true;
+           else return false;
+	}	
 	public function AddUser($nom,$prenom,$email,$numero,$role){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("INSERT INTO user(lastName,firstName,email,phoneNumber,role) values(?,?,?,?,?)");
