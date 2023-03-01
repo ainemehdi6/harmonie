@@ -884,3 +884,14 @@ job_post.post-popup,
     font-size: 15px;
     text-align: center;
 }
+
+@media screen and (max-width: 650px) {
+    .post-popup {
+        width: 350px;
+        top: 60%;
+    }
+
+    .post-project-fields {
+        width: 88%;
+    }
+}

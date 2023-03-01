@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
     session_start();
     include_once('DAO.php');
@@ -10,6 +9,7 @@
     }
     else header("location:EventsList.php?res=error");
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
