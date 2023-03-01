@@ -61,6 +61,18 @@ class DAO{
    		return $resultstring;
 	}
 
+	public function getFirstName($idAdmin){
+		$con = mysqli_connect('127.0.0.1','root','','harmonie');
+		mysqli_select_db($con,"harmonie");
+		$sql="select firstName from admin where idAdmin=$idAdmin";
+		$query = mysqli_query($con,$sql);
+		$result = mysqli_fetch_assoc($query);
+		$resultstring = $result['firstName'];
+		mysqli_close($con); 
+   		return $resultstring;
+	}
+
+
 	public function getAdminProfil($idAdmin){
 		   $bdd=$this->connexion();
 		   $reponse=$bdd->prepare("SELECT * from admin where idAdmin=$idAdmin");

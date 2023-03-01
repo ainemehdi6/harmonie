@@ -20,16 +20,9 @@
 </head>
 
 <body>
-    <header >
-        <div class="header_top">
-            <img src="assets/images/logo.jpeg" alt="logo Harmonie">
-            <a href="loginUser.php"><i class="fa-solid fa-gear"></i></a>
-        </div>
-        <div class="header_txt">
-            <h2>Bienvenue</h2>
-        </div>
-    </header>
-    <hr>
+    
+<?php include_once('assets/models/headerAdmin.php') ?>
+
     <div class="container">
         <div class="main">
             <h1 class="title-one">Changer mot de passe Admin</h1>

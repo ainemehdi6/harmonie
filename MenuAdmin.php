@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<?php
-    session_start();
-    if(!isset($_SESSION['idAdmin']))
-    {
-      header("location:loginAdmin.php?erreur=2");
-    }
-    include_once('DAO.php');
-    $dao=new DAO();
-?>
 <html lang="en">
 
 <head>
@@ -19,9 +10,16 @@
     <title>Accueil Admin</title>
 
 </head>
-
+<?php
+session_start();
+if (!isset($_SESSION['idAdmin'])) {
+    header("location:loginAdmin.php?erreur=2");
+}
+include_once('DAO.php');
+$dao = new DAO();
+?>
 <body>
-<?php include_once('assets/models/header.html') ?>
+<?php include_once('assets/models/headerAdmin.php') ?>
     <main style="display:flex;">
         <div class="buttons" style="margin:50px auto 0 auto;">
             <div class="button_font">

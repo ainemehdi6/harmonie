@@ -22,7 +22,7 @@ $dao = new DAO();
 
 <body>
 
-    <?php include_once('assets/models/header.html') ?>
+    <?php include_once('assets/models/headerAdmin.php') ?>
     <main id="main">
         <h1 class="center-text">Gestion des évènements</h1>
         <div class="btns-grp">
