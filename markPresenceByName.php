@@ -23,6 +23,8 @@
     <?php include_once('assets/models/header.html') ?>
     <main>
         <h2 class="center-text">Liste des événements</h2>
+       <h2 class="center-text"><?php $name = $dao->getFirstNameAndLastName($userId);
+       echo $name; ?></h2>
         <div class="btns-grp">
             <a href="EventUserList.php" class="btn btn-main">Liste des événements par nom</a>
         </div>
