@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://kit.fontawesome.com/b9398f24d6.js" crossorigin="anonymous"></script>
-    <title>Accueil Admin</title>
-
-</head>
 <?php
 session_start();
 if (!isset($_SESSION['idAdmin'])) {
@@ -18,6 +6,16 @@ if (!isset($_SESSION['idAdmin'])) {
 include_once('DAO.php');
 $dao = new DAO();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/b9398f24d6.js" crossorigin="anonymous"></script>
+    <title>Accueil Admin</title>
+</head>
 <body>
 <?php include_once('assets/models/headerAdmin.php') ?>
     <main style="display:flex;">
