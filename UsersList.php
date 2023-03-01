@@ -44,7 +44,7 @@ $dao = new DAO();
       
 
     </div>
-
+    <div class="wrapper">
     <table>
       <tr>
         <th>Nom</th>
@@ -67,10 +67,9 @@ $dao = new DAO();
                   
                 </tr>';
       }
-
       ?>
     </table>
-
+    </div>
   </main>
 
 

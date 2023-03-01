@@ -32,7 +32,7 @@
     <hr>
     <div class="container">
         <div class="main">
-            <h1>Changer mot de passe Admin</h1>
+            <h1 class="title-one">Changer mot de passe Admin</h1>
             <form class="change-password" action="controllers/ChangePassAdmin.php" method="POST">
                 <div class="input">
                     <input class="label-info" type="password" name="oldpass" placeholder="Ancien MDP Admin">

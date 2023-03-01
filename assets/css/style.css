@@ -4,75 +4,92 @@
     --blue: #01369B;
     --footerColor: #2522;
     --orange: #E5994A;
-    --red:#FF5038;
+    --red: #FF5038;
     --green: #38FF94;
     --black: #000000;
     --white: #f8f8f8;
-    --gray:#D9D9D9;
+    --gray: #D9D9D9;
 }
+
 @font-face {
     font-family: Inter;
     src: url('../font/inter.ttf');
 }
-body{      
+
+body {
     margin: 0;
     padding: 0;
     font-family: Inter;
     background-color: #ffffff;
 }
 
-img{
+img {
     width: 100%;
 }
-header{
+
+header {
     padding: 20px;
 }
-header .header_top{
+
+header .header_top {
     display: flex;
     justify-content: space-between;
     font-size: 40px;
-    
+
 }
+
 header .header_top a i {
     color: var(--blue);
 }
-header .header_top img{
+
+header .header_top img {
     width: 30%;
 }
-header .header_top a{
+
+header .header_top a {
     float: right;
     margin: auto 0;
 }
-header .header_txt{
+
+header .header_txt {
     text-align: center;
 }
-.header_top{
+
+.header_top {
     padding: 10px;
     display: flex;
     justify-content: space-between;
 }
-.header_top img{
+
+.header_top img {
     width: 20%;
 }
-header *{
+
+header * {
     margin: auto 0;
 }
-header i{
+
+header i {
     font-size: 30px;
 }
-header .header_title hr{
+
+header .header_title hr {
     height: 2px;
     background-color: var(--black);
 }
-hr{
+
+hr {
     width: 99.5%;
     height: 10px;
     background-color: var(--blue);
 }
-input,button{
+
+input,
+button {
     border: none;
 }
-footer{
+
+footer {
     margin-top: 50px;
     width: 99%;
     padding: 5px;
@@ -82,31 +99,37 @@ footer{
     bottom: 0;
     text-align: center;
 }
-table td{
+
+table td {
     height: 30px;
 }
-.btn{
+
+.btn {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
     text-decoration: none;
     width: fit-content;
 }
-.btn-present{
+
+.btn-present {
     background-color: var(--blue);
     color: var(--white);
-    border: solid 1px  var(--blue);
+    border: solid 1px var(--blue);
 }
-.btn-absent{
+
+.btn-absent {
     background-color: var(--white);
     color: var(--orange);
     border: solid 1px var(--orange);
 }
-.btns-grp{
+
+.btns-grp {
     display: flex;
     justify-content: space-between;
 }
-.btn-main{
+
+.btn-main {
     border-radius: 10px;
     padding: 5px;
     margin: 10px;
@@ -117,37 +140,53 @@ table td{
     margin: 20px;
     width: fit-content;
 }
+
 .overlay:before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.75);
-	z-index: 99;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 99;
 }
-.event-titre{
+
+.event-titre {
     font-size: 28px;
     font-weight: bold;
 }
-.event-descrip{
+
+.event-descrip {
     font-size: 20px;
     font-weight: 600;
 }
-.event-date{
+
+.event-date {
     font-size: 28px;
     font-weight: bold;
 }
-table tr:not(:first-child):hover{
+
+table tr:not(:first-child):hover {
     background-color: #b4b1b1;
 }
 
+/* Style pour le scroll sur les tableaux */
+.wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+}
 
+.wrapper table {
+    width: auto;
+    min-width: 100%;
+}
 
-
-
-
+@media screen and (max-width: 414px) {
+    .title-one {
+        font-size: 1.5rem;
+    }
+}
 
 
 
@@ -251,31 +290,35 @@ table {
     border-collapse: collapse;
     width: 100%;
     text-align: center;
-  }
+}
 
-  td, th {
+td,
+th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
     text-align: center;
-  }
+}
 
-  tr:nth-child(even) {
-    background-color: #f7ebdf  ;
-    
-  }
-  
-.center-text{
+tr:nth-child(even) {
+    background-color: #f7ebdf;
+
+}
+
+.center-text {
     text-align: center;
 }
+
 /* boutons événement user */
-.button{
+.button {
     border-radius: 0.4rem;
 }
+
 /* CSS text footer */
 .problem-link {
     text-decoration: none;
 }
+
 /* CSS Button Menu Admin */
 .button_font a {
     background-color: var(--blue);
@@ -479,33 +522,39 @@ table {
 
 
 
-/* CSS OUSSAMA */ 
-.padding_connexion{
+/* CSS OUSSAMA */
+.padding_connexion {
     margin: auto;
 }
-.login_inter{
-    background-color:  var(--blue);
+
+.login_inter {
+    background-color: var(--blue);
     border-radius: 10px;
     border: none;
     color: var(--white);
 
 
 }
-.container{
+
+.container {
     display: flex;
 }
-.main{
- margin: auto;    
+
+.main {
+    margin: auto;
 }
-form{
+
+form {
     display: grid;
-  
-    
+
+
 }
-.button{
+
+.button {
     display: flex;
-  
+
 }
+
 button {
     margin: 4px auto auto auto;
     background-color: var(--blue);
@@ -517,69 +566,81 @@ button {
     margin-top: 1rem;
     border-radius: 10px;
 }
-.input{
+
+.input {
     display: flex;
 }
-input{
+
+input {
     margin: auto;
     background-color: var(--gray);
     padding: 0.8rem 2rem;
     border-radius: 0.8rem;
 }
-.probleme{
+
+.probleme {
     display: flex;
-    
+
 }
-a{
+
+a {
     margin: auto;
     text-decoration: underline;
     color: var(--black);
 
- 
-}
-.buttons{
-    display: grid;
-    margin:auto;
+
 }
 
-.button{
-    
-    width:200px;
+.buttons {
+    display: grid;
+    margin: auto;
+}
+
+.button {
+
+    width: 200px;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
-    
+
 }
-.button_font a{
+
+.button_font a {
     color: white;
     text-decoration: none;
-    
+
 }
-.deco{
+
+.deco {
     display: flex;
-    
+
 }
-.deco a{
-    margin :auto;
+
+.deco a {
+    margin: auto;
     font-weight: bold;
-    
+
 }
-.texte{
+
+.texte {
     display: block;
     text-align: center;
 }
-.texte h1{
+
+.texte h1 {
     margin-bottom: 10px;
 }
-p{
-font-weight: bolder;
-font-size: larger;
+
+p {
+    font-weight: bolder;
+    font-size: larger;
 }
 
-.buttons_listusers{
- display: flex;
- justify-content: space-between;
+.buttons_listusers {
+    display: flex;
+    justify-content: space-between;
 }
+
 .custom-file-upload {
     display: inline-block;
     padding: 8px 16px;
@@ -588,14 +649,15 @@ font-size: larger;
     border-radius: 10px;
     cursor: pointer;
     font-weight: 500;
-  }
-  .custom-file-upload i {
+}
+
+.custom-file-upload i {
     margin-right: 8px;
-  }
-  
+}
 
 
-.header_top img{
+
+.header_top img {
     max-width: 150px;
     height: auto;
 }
@@ -604,7 +666,8 @@ a {
     height: fit-content;
 
 }
-.upload{
+
+.upload {
     margin-left: 10px;
 }
 
@@ -659,125 +722,141 @@ a {
 
 
 .post-popup {
-	width: 570px;
-	margin: 0 auto;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.65);
-	-moz-transform: translateX(-50%) translateY(-50%) scale(0.65);
-	-ms-transform: translateX(-50%) translateY(-50%) scale(0.65);
-	-o-transform: translateX(-50%) translateY(-50%) scale(0.65);
-	transform: translateX(-50%) translateY(-50%) scale(0.65);
-	opacity: 0;
-	visibility: hidden;
-	z-index: 0;
+    width: 570px;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.65);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.65);
+    -ms-transform: translateX(-50%) translateY(-50%) scale(0.65);
+    -o-transform: translateX(-50%) translateY(-50%) scale(0.65);
+    transform: translateX(-50%) translateY(-50%) scale(0.65);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
 }
+
 .post-popup.active {
-	opacity: 1;
-	visibility: visible;
-	z-index: 999;
-	-webkit-transform: scale(1) translateX(-50%) translateY(-50%);
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+    -webkit-transform: scale(1) translateX(-50%) translateY(-50%);
 }
-.post-project > a {
-	position: absolute;
-	top: -20px;
-	right: -20px;
-	color: var(--black);
-	font-size: 22px;
-	cursor: pointer;
+
+.post-project>a {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    color: var(--black);
+    font-size: 22px;
+    cursor: pointer;
 }
-.post-project > a:hover {
-	color: #fff;
+
+.post-project>a:hover {
+    color: #fff;
 }
+
 .post-project {
-	float: left;
-	width: 100%;
-	position: relative;
+    float: left;
+    width: 100%;
+    position: relative;
 }
+
 .post-project h3 {
     margin: 0;
-	float: left;
-	width: 100%;
-	background-color: var(--blue);
-	color: #fff;
-	text-align: center;
-	font-size: 18px;
-	font-weight: 500;
-	padding: 20px 0;
+    float: left;
+    width: 100%;
+    background-color: var(--blue);
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px 0;
 }
+
 .post-project-fields {
-	float: left;
-	width: 93%;
-	padding: 30px 20px;
-	background-color: #fff;
+    float: left;
+    width: 93%;
+    padding: 30px 20px;
+    background-color: #fff;
 }
+
 .post-project-fields form {
-	float: left;
-	width: 100%;
+    float: left;
+    width: 100%;
 }
+
 .post-project-fields form input {
-	padding: 0 15px;
-	height: 40px;
+    padding: 0 15px;
+    height: 40px;
     width: 93%;
 }
+
 .post-project-fields form input,
 .post-project-fields form textarea,
 .post-project-fields form select {
-	width: 93%;
-	color: var(--black);
-	font-size: 14px;
-	border: 1px solid #e5e5e5;
-	margin-bottom: 20px;
-	font-weight: 500;
+    width: 93%;
+    color: var(--black);
+    font-size: 14px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
+
 .post-project-fields form select {
-	height: 40px;
-	padding: 0 10px;
+    height: 40px;
+    padding: 0 10px;
 }
+
 .post-project-fields form ul {
-	float: left;
-	margin-top: 10px;
-	width: 100%;
+    float: left;
+    margin-top: 10px;
+    width: 100%;
 }
+
 .post-project-fields form ul li {
-	display: inline-block;
-	margin-right: 15px;
+    display: inline-block;
+    margin-right: 15px;
 }
+
 .post-project-fields form ul li button.active {
-	background-color: var(--blue);
-	color: #fff;
+    background-color: var(--blue);
+    color: #fff;
 }
+
 .post-project-fields form ul li button,
 .post-project-fields form ul li a {
-	color: var(--black);
-	font-size: 16px;
-	border: 1px solid #e5e5e5;
-	padding: 10px 25px;
-	display: inline-block;
-	background-color: #fff;
-	font-weight: 600;
-	cursor: pointer;
+    color: var(--black);
+    font-size: 16px;
+    border: 1px solid #e5e5e5;
+    padding: 10px 25px;
+    display: inline-block;
+    background-color: #fff;
+    font-weight: 600;
+    cursor: pointer;
 }
+
 .post-project-fields form ul li button:hover,
 .post-project-fields form ul li a:hover {
-	background-color: var(--blue);
-	color: #fff;
-} 
+    background-color: var(--blue);
+    color: #fff;
+}
+
 .post-project-fields form input,
 .post-project-fields form textarea,
 .post-project-fields form select,
 .post-project-fields form ul li button,
 .post-project-fields form ul li a,
 job_post.post-popup,
-.post-project > a,
+.post-project>a,
 .post-project-fields form ul li button,
-.post-project-fields form ul li a{
-	-webkit-transition: all 0.4s ease-in;
-	-moz-transition: all 0.4s ease-in;
-	-ms-transition: all 0.4s ease-in;
-	-o-transition: all 0.4s ease-in;
-	transition: all 0.4s ease-in;
+.post-project-fields form ul li a {
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
 }
 
 
@@ -792,15 +871,16 @@ job_post.post-popup,
     flex-direction: column;
     align-items: center;
 }
+
 /* CSS FORMULAIRE MODIFICATION PROFIL ADMIN */
 .input-form-editprofiladmin {
     padding: 0.8rem 2rem;
     border-radius: 0.8rem;
 }
+
 /* Label modif form admin */
-.label-info{
+.label-info {
     margin-bottom: none;
     font-size: 15px;
     text-align: center;
 }
-

@@ -28,6 +28,7 @@ $dao = new DAO();
         <div class="btns-grp">
             <a href="#" class="btn btn-main" onclick="AddEventBoxOn()">Ajouter</a>
         </div>
+        <div class="wrapper">
         <table>
             <tr>
                 <th>Date</th>
@@ -55,6 +56,7 @@ $dao = new DAO();
 
 
         </table>
+        </div>
     </main>
     <div class="post-popup job_post" id="add_post">
 			<div class="post-project">

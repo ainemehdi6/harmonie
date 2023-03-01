@@ -26,6 +26,7 @@
         <div class="btns-grp">
             <a href="EventUserList.php" class="btn btn-main">Liste des événements par nom</a>
         </div>
+        <div class="wrapper">
         <table>
           <tr>
             <th>Date</th>
@@ -49,6 +50,7 @@
             }
           ?>
         </table>
+        </div>
 
     </main>
     <?php include_once('assets/models/footer.html') ?>
