@@ -8,6 +8,7 @@ $dao = new DAO();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,12 +17,13 @@ $dao = new DAO();
     <script src="https://kit.fontawesome.com/b9398f24d6.js" crossorigin="anonymous"></script>
     <title>Accueil Admin</title>
 </head>
+
 <body>
-<?php include_once('assets/models/headerAdmin.php') ?>
+    <?php include_once('assets/models/headerAdmin.php') ?>
     <main style="display:flex;">
         <div class="buttons" style="margin:50px auto 0 auto;">
             <div class="button_font">
-                <a style="text-decoration: none;" href="UsersList.php" class="button" > Gestion des membres</a>
+                <a style="text-decoration: none;" href="UsersList.php" class="button"> Gestion des membres</a>
             </div>
 
             <div class="button_font">
@@ -41,11 +43,10 @@ $dao = new DAO();
             </div>
 
             <div class="deco">
-                <a  href="controllers/logout.php">Déconnexion </a>
+                <a href="controllers/logout.php">Déconnexion </a>
             </div>
         </div>
     </main>
-    <br><br><br><br><br><br>
     <?php include_once('assets/models/footer.html') ?>
 </body>
 

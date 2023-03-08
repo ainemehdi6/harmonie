@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <header >
+    <header>
         <div class="header_top">
             <img src="assets/images/logo.jpeg" alt="logo Harmonie">
-            <a href="loginUser.php"><i class="fa-solid fa-gear"></i></a>
+            <a href="loginUser.php"><i class="fa-solid fa-user"></i></a>
         </div>
         <div class="header_txt">
             <h2>Bienvenue</h2>
@@ -40,7 +40,7 @@
         </div>
         </form>
 
-</div>
+    </div>
     <?php include_once('assets/models/footer.html') ?>
 </body>
 
