@@ -1,6 +1,5 @@
 <?php
 	
-    $pw=$_POST['pass'];
     $newfirstname=$_POST['oldfirstname'];
     $newlastname=$_POST['oldlastname'];
 	$newemail=$_POST['oldemail'];
@@ -9,15 +8,11 @@
     $idAdmin = $_SESSION['idAdmin']; 
 	include('../DAO.php');
 	$dao=new DAO();
-    if($dao->getAdminPassword($idAdmin) == $pw){
-            if(!$dao->EditProfilAdmin($newfirstname,$newlastname,$newemail,$newphonenumber,$idAdmin)){
-                header("location:../EditProfilAdmin.php");
+            if($dao->EditProfilAdmin($newfirstname,$newlastname,$newemail,$newphonenumber,$idAdmin)){
+                header("location:../GestionAdmins.php");
             }else{
                 header("location:../MenuAdmin.php?erreur=2");
                 die();
             }
-        }else{
-            header("location:../MenuAdmin.php?erreur=3");
-            die();
-        }
+
 ?>

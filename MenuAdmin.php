@@ -31,6 +31,10 @@ $dao = new DAO();
             </div>
 
             <div class="button_font">
+                <a style="text-decoration: none;" href="gestionAdmins.php" class="button"> Gestion des Admins</a>
+            </div>
+
+            <div class="button_font">
                 <a style="text-decoration: none;" href="ChangePassUser.php" class="button"> Changer MDP User</a>
             </div>
 
