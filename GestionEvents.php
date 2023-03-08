@@ -16,6 +16,7 @@ $dao = new DAO();
 
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/b9398f24d6.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="assets/images/favicon.JPG" />
     <title>Gestion des événements</title>
 </head>
 

@@ -22,7 +22,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/b9398f24d6.js" crossorigin="anonymous"></script>
-    <title>évènementdetails</title>
+    <link rel="icon" type="image/jpg" href="assets/images/favicon.JPG" />
+    <title>évènement details</title>
 
 </head>
 
