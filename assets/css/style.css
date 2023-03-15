@@ -198,12 +198,57 @@ table tr:not(:first-child):hover {
 
 
 
+/* Style pour l'îcone oeil et l'input change password */
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.8rem;
+    font-family: arial;
+    background: var(--gray);
+}
 
+label {
+    position: relative;
+}
 
+label input {
+    font-size: 1em;
+    color: #0c0c0c;
+    background: transparent;
+    padding: 1rem 1.2rem;
+    width: 250px;
+    border: none;
+    transition: all 0.2s;
+    margin-bottom: none;
+    font-size: 15px;
+    text-align: center;
+}
 
+label input:focus {
+    border-color: #ff4754;
+}
 
+label .password-icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 20px;
+    color: #0c0c0c;
+    transition: all 0.2s;
+}
 
+label .password-icon:hover {
+    cursor: pointer;
+    color: #ff4754;
+}
 
+label .password-icon .feather-eye-off {
+    display: none;
+}
 
 
 
@@ -291,7 +336,11 @@ table tr:not(:first-child):hover {
 
 
 
-/* CSS PHILIPPE */
+
+
+
+
+
 /* Tableau liste des événements user */
 table {
     font-family: arial, sans-serif;
