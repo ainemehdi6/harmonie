@@ -27,7 +27,30 @@
         <div class="main">
             <h1 class="title-one">Changer mot de passe User</h1>
             <form class="change-password" action="controllers/ChangePassUser.php" method="POST">
-                <div class="input">
+            <label>
+            <input class="label-info" type="password" name="olduserpw" placeholder="Ancien MDP User">
+            <div class="password-icon">
+            <i data-feather="eye"></i>
+            <i data-feather="eye-off"></i>
+            </div>
+            </label>
+            <br>
+            <label>
+            <input class="label-info" type="password" name="newuserpassword" placeholder="Nouveau Mot de passe">
+            <div class="password-icon">
+            <i data-feather="eye"></i>
+            <i data-feather="eye-off"></i>
+            </div>
+            </label>
+            <br>
+            <label>
+            <input class="label-info" type="password" name="cnewuserpassword" placeholder="Confirmer Mot de passe">
+            <div class="password-icon">
+            <i data-feather="eye"></i>
+            <i data-feather="eye-off"></i>
+            </div>
+            </label>
+                <!--<div class="input">
                     <input type="password" name="olduserpw" placeholder="Ancien MDP User">
                 </div> <br>
                 <div class="input">
@@ -35,7 +58,7 @@
                 </div> <br>
                 <div class="input">
                     <input type="password" name="cnewuserpassword" placeholder="Confirmer Mot de passe">
-                </div>
+                </div>-->
                 <div class="button">
                     <button type="submit">Valider changement</button>
                 </div>
@@ -44,6 +67,28 @@
 
 </div>
     <?php include_once('assets/models/footer.html') ?>
+    <script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace();
+const eyes = document.querySelectorAll(".feather-eye");
+const eyeoffs = document.querySelectorAll(".feather-eye-off");
+const passwordFields = document.querySelectorAll("input[type=password]");
+
+for (let i = 0; i < eyes.length; i++) {
+  eyes[i].addEventListener("click", () => {
+    eyes[i].style.display = "none";
+    eyeoffs[i].style.display = "block";
+
+    passwordFields[i].type = "text";
+  });
+
+  eyeoffs[i].addEventListener("click", () => {
+    eyeoffs[i].style.display = "none";
+    eyes[i].style.display = "block";
+    passwordFields[i].type = "password";
+  });
+}
+</script>
 </body>
 <?php var_dump($_SESSION['idAdmin']);?>
 
