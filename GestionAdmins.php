@@ -50,9 +50,9 @@ $dao = new DAO();
                   <td>' . $admin[4] . '</td>
                   <td>' . $admin[3] . '</td>
                   <td>
-                    <a href="#" onclick="EditAdminBoxOn(' . $admin[0] . ')">
+                    <a href="#" class="btn btn-primary" onclick="EditAdminBoxOn(' . $admin[0] . ')">
                       <i class="fa-solid fa-pen-to-square"></i>
-                    </a>&nbsp&nbsp&nbsp&nbsp
+                    </a>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteAdmin' . $admin[0] . '">
                       <i class="fa-solid fa-trash"></i>
                     </button>
@@ -74,16 +74,16 @@ $dao = new DAO();
         <form action="controllers/addAdmin.php" method="post" enctype="multipart/form-data">
           <div class="row">
             <div class="col-lg-12">
-              <input type="text" name="nom" placeholder="nom" required>
+              <input type="text" name="nom" placeholder="Nom *" required>
             </div>
             <div class="col-lg-12">
-              <input type="text" name="prenom" placeholder="prenom" required>
+              <input type="text" name="prenom" placeholder="Prenom *" required>
             </div>
             <div class="col-lg-12">
-              <input type="email" name="email" placeholder="email">
+              <input type="email" name="email" placeholder="Email *" required>
             </div>
             <div class="col-lg-12">
-              <input type="text" name="telephone" placeholder="téléphone">
+              <input type="phone" name="telephone" placeholder="Téléphone">
             </div>
             <div class="col-lg-12">
               <input type="password" name="password" id="password" placeholder="password">
@@ -115,20 +115,20 @@ $dao = new DAO();
                                 <div class="row">
                                 <div class="col-lg-12">             
                                   <input type="hidden" name="idAdmin" value="' . $admin[0] . '" >
-                                  <input type="text" name="oldfirstname" placeholder="nom" value="' . $admin[2] . '" required>
+                                  <input type="text" name="oldfirstname" placeholder="Nom *" value="' . $admin[2] . '" required>
                                 </div> 
                                 <div class="col-lg-12">
-                                    <input type="text" name="oldlastname" placeholder="prenom" value="' . $admin[1] . '" required>
+                                    <input type="text" name="oldlastname" placeholder="Prenom *" value="' . $admin[1] . '" required>
                                 </div>
                                 <div class="col-lg-12">
-                                  <input type="email" name="oldemail" placeholder="email" value="' . $admin[3] . '">
+                                  <input type="email" name="oldemail" placeholder="Email *" value="' . $admin[3] . '" required>
                                 </div>
                                 <div class="col-lg-12">
-                                  <input type="text" name="oldphonenumber" placeholder="numéro" value="' . $admin[4] . '">
+                                  <input type="phone" name="oldphonenumber" placeholder="Numéro" value="' . $admin[4] . '">
                                 </div>
                                 <div class="col-lg-12">
                                   <button  class="btn btn-primary btn-lg btn-block" name="submit" type="submit" value="post">Modifier</button>
-                                  <button class="btn btn-secondary btn-lg btn-block" href="#" title="" type="cancel">Cancel</button>SS    
+                                  <button class="btn btn-secondary btn-lg btn-block" href="#" title="" type="cancel">Cancel</button>
                                 </div>
                                 </div>
                             </form>
@@ -153,7 +153,7 @@ $dao = new DAO();
           </a>
         </div>
         <div class="modal-body">
-        <strong>' . $admin[1] . ' ' . $admin[2] . '</strong> va étre supprimé
+        L\'admin <strong>' . $admin[1] . ' ' . $admin[2] . '</strong> va étre supprimé
       </div>
         <div class="modal-footer">
           <a type="button" class="btn btn-primary" href="controllers/deleteAdmin.php?idAdmin=' . $admin[0] . '">Comfirmer</a>
