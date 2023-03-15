@@ -42,7 +42,7 @@ $dao = new DAO();
           <a href="#" class="btn btn-main" onclick="AddUserBoxOn()">Ajouter</a>
         </div>
         <div class="btns-grp">
-          <a href="controllers/deleteAllUser.php" class="btn btn-main" onclick="()">Supprimer la liste des membres</a>
+          <a href="controllers/deleteAllUser.php" class="deletealluser" onclick="()">Supprimer la liste des membres</a>
         </div>
       </div>
         
