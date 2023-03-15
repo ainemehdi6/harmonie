@@ -735,7 +735,6 @@ header a {
 }
 
 .btns-grp a:hover {
-    background-color: #34495e;
     transform: scale(1.05);
 }
 

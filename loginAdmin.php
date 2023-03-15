@@ -33,7 +33,7 @@
                 <div class="input">
                     <input type="password" name="password" placeholder="Mot de passe">
                 </div>
-                <div class="button">
+                <div class="button" style="margin:auto">
                     <button type="submit">Se connecter</button>
                 </div>
 

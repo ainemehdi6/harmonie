@@ -32,7 +32,7 @@
                 <div class="input">
                     <input type="password" name="password" placeholder="Entrer le mot de passe">
                 </div>
-                <div class="button">
+                <div class="button" style="margin:auto">
                     <button type="submit">Se connecter</button>
                 </div>
 
