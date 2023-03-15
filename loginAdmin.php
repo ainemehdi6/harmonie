@@ -16,7 +16,9 @@
     <header>
         <div class="header_top">
             <img src="assets/images/logo.jpeg" alt="logo Harmonie">
-            <a href="loginUser.php"><i class="fa-solid fa-user"></i></a>
+            <div class="btns-grp">
+                <a class='btn btn-main' href="loginUser.php">Login Membre</a>
+            </div>
         </div>
         <div class="header_txt">
             <h2>Bienvenue</h2>
@@ -25,14 +27,13 @@
     <hr>
     <div class="container">
         <div class="main">
-            <h1>Connexion</h1>
+            <h1 class="title" style="text-align:center">Se connecter en tant qu'administrateur</h1>
             <form action="controllers/loginAdmin.php" method="POST">
-                <div class="input">
-                    <label>
-                        <input class="label-info" type="text" name="email" placeholder="Email">
-                    </label>
-                </div> <br>
-                <label>
+                <label style="width:280px;margin:auto">
+                    <input class="label-info" type="text" name="email" placeholder="Email">
+                </label>
+                <br>
+                <label style="width:280px;margin:auto">
                     <input class="label-info" type="password" name="password" placeholder="Mot de passe">
                     <div class="password-icon">
                         <i data-feather="eye"></i>
@@ -40,15 +41,16 @@
                     </div>
                 </label>
                 <!--<div class="input">
-                    <input type="password" name="password" placeholder="Mot de passe">
-                </div>-->
-                <div class="button">
+                        <input type="password" name="password" placeholder="Mot de passe">
+                    </div>-->
+                <div class="button" style="margin:auto">
                     <button type="submit">Se connecter</button>
                 </div>
 
                 <a href="#" class="link-problem">Problème de <br> connexion ?</a>
         </div>
-        </form>
+    </div>
+    </form>
 
     </div>
     <?php include_once('assets/models/footer.html') ?>

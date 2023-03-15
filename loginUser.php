@@ -18,7 +18,9 @@
     <header>
         <div class="header_top">
             <img src="assets/images/logo.jpeg" alt="logo Harmonie">
-            <a href="loginAdmin.php"><i class="fa-solid fa-gear"></i></a>
+            <div class="btns-grp">
+                <a class='btn btn-main' href="loginAdmin.php">Login Admin</a>
+            </div>
         </div>
         <div class="header_txt">
             <h2>Bienvenue</h2>
@@ -27,16 +29,16 @@
     <hr>
     <div class="container">
         <div class="main">
-            <h1 class="title">Connexion</h1>
+            <h1 class="title" style="text-align:center">Se connecter en tant que membre</h1>
             <form action="controllers/loginUser.php" method="POST">
-                <label>
+                <label style="width:300px;margin:auto">
                     <input class="label-info" type="password" name="password" placeholder="Entrer le mot de passe">
                     <div class="password-icon">
                         <i data-feather="eye"></i>
                         <i data-feather="eye-off"></i>
                     </div>
                 </label>
-                <div class="button">
+                <div class="button" style="margin:auto">
                     <button type="submit">Se connecter</button>
                 </div>
 
