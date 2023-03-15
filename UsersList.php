@@ -14,6 +14,7 @@ $dao = new DAO();
   <script src="assets/js/script.js"></script>
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/b9398f24d6.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/jpg" href="assets/images/favicon.JPG" />
   <title>Liste des utilisateurs</title>
 </head>
 
@@ -33,14 +34,20 @@ $dao = new DAO();
         <input id="file-input" type="file" style="display:none;" />
 
         <div class="btns-grp">
-          <a href="controllers/importer.php" class="btn btn-main btn-primary">exporter</a>
+          <a href="controllers/importer.php" class="btn btn-main">exporter</a>
         </div>
       </form>
 
 
       <div class="btns-grp">
-        <a href="#" class="btn btn-main btn-primary" onclick="AddUserBoxOn()">Ajouter</a>
+        <div class="btns-grp">
+          <a href="#" class="btn btn-main" onclick="AddUserBoxOn()">Ajouter</a>
+        </div>
+        <div class="btns-grp">
+          <a href="controllers/deleteAllUser.php" class="deletealluser" onclick="()">Supprimer la liste des membres</a>
+        </div>
       </div>
+
 
 
 

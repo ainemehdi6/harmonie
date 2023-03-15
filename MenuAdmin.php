@@ -15,6 +15,7 @@ $dao = new DAO();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://kit.fontawesome.com/b9398f24d6.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/jpg" href="assets/images/favicon.JPG" />
     <title>Accueil Admin</title>
 </head>
 
@@ -28,6 +29,10 @@ $dao = new DAO();
 
             <div class="button_font">
                 <a style="text-decoration: none;" href="gestionEvents.php" class="button"> Gestion des évènements</a>
+            </div>
+
+            <div class="button_font">
+                <a style="text-decoration: none;" href="gestionAdmins.php" class="button"> Gestion des Admins</a>
             </div>
 
             <div class="button_font">

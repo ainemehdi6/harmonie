@@ -98,6 +98,7 @@ class DAO{
 			  return $lst;
 	   }
 
+
 	public function authentificationUser($email,$password){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("SELECT * from admin where email= ? and password = ?");
@@ -230,6 +231,16 @@ class DAO{
    		else return false;
 	}
 
+	public function deleteAllUser(){
+		$bdd = $this->connexion();
+		$reponse = $bdd->prepare("DELETE FROM user");
+		if ($reponse->execute()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public function EditEvent($titre,$description,$date,$statut,$idEvent){
 		$bdd=$this->connexion();
 		$reponse=$bdd->prepare("UPDATE event set titre=?,description=?,date=?,statut=? where idEvent=?");
@@ -288,5 +299,32 @@ class DAO{
 		}
 
 	}
-	
+
+	public function listAdmins($idAdmin){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("SELECT * from admin where idAdmin!=?");
+		   $reponse->execute([$idAdmin]);
+		   $lst=[];
+		   while($ligne=$reponse->fetch()){
+				$lst[]=[$ligne[0],$ligne[1],$ligne[2],$ligne[3],$ligne[4],$ligne[5]];
+		  }
+		   $reponse->closeCursor();  
+		   return $lst;
+	}
+
+	public function deleteAdmin($idAdmin){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("DELETE from admin where idAdmin=?");
+   		$reponse->execute([$idAdmin]); 
+		   if ($ligne=$reponse->fetch()) return true;
+   		else return false;
+	}
+
+	public function AddAdmin($nom,$prenom,$email,$numero,$password){
+		$bdd=$this->connexion();
+		$reponse=$bdd->prepare("INSERT INTO admin(lastName,firstName,email,phoneNumber,password) values(?,?,?,?,?)");
+   		$reponse->execute([$nom,$prenom,$email,$numero,$password]); 
+		   if ($ligne=$reponse->fetch()) return true;
+   		else return false;
+	}
 }    
