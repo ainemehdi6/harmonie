@@ -55,8 +55,8 @@ $dao = new DAO();
     <div class="wrapper">
       <table class="table table-bordered thead-dark table-striped">
         <tr>
-          <th>Nom</th>
           <th>Prénom</th>
+          <th>Nom</th>
           <th>Téléphone</th>
           <th>Email</th>
           <th>Action</th>
@@ -67,8 +67,8 @@ $dao = new DAO();
         foreach ($listUsers as $user) {
           echo '
                 <tr>
-                  <td>' . $user[2] . '</td>
                   <td>' . $user[1] . '</td>
+                  <td>' . $user[2] . '</td>
                   <td>' . $user[4] . '</td>
                   <td>' . $user[3] . '</td>
                   <td>
@@ -96,10 +96,10 @@ $dao = new DAO();
         <form action="controllers/addUser.php" method="post" enctype="multipart/form-data">
           <div class="row">
             <div class="col-lg-12">
-              <input type="text" name="nom" placeholder="Nom" required>
+              <input type="text" name="prenom" placeholder="Prénom" required>
             </div>
             <div class="col-lg-12">
-              <input type="text" name="prenom" placeholder="Prenom" required>
+              <input type="text" name="nom" placeholder="Nom" required>
             </div>
             <div class="col-lg-12">
               <input type="text" name="email" placeholder="Email">
@@ -134,10 +134,10 @@ $dao = new DAO();
                                 <div class="row">
                                 <div class="col-lg-12">             
                                   <input type="hidden" name="idUser" value="' . $user[0] . '" >
-                                  <input type="text" name="nom" placeholder="nom" value="' . $user[2] . '" required>
+                                  <input type="text" name="prenom" placeholder="Prénom" value="' . $user[1] . '" required>
                                 </div> 
                                 <div class="col-lg-12">
-                                    <input type="text" name="prenom" placeholder="prenom" value="' . $user[1] . '" required>
+                                    <input type="text" name="nom" placeholder="Nom" value="' . $user[2] . '" required>
                                 </div>
                                 <div class="col-lg-12">
                                   <input type="text" name="email" placeholder="email" value="' . $user[3] . '">

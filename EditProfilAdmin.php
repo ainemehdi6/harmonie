@@ -1,14 +1,14 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['idAdmin']))
-    {
-      header("location:loginAdmin.php?erreur=2");
-    }
-    include_once('DAO.php');
-    $dao=new DAO();
+session_start();
+if (!isset($_SESSION['idAdmin'])) {
+    header("location:loginAdmin.php?erreur=2");
+}
+include_once('DAO.php');
+$dao = new DAO();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,41 +21,39 @@
 </head>
 
 <body>
-<?php include_once('assets/models/headerAdmin.php') ?>
+    <?php include_once('assets/models/headerAdmin.php') ?>
 
     <div class="container">
         <div class="main">
             <h1>Modification Profil Admin</h1>
-            <?php 
+            <?php
             $infoAdmin = $dao->getAdminProfil($_SESSION['idAdmin']);
-            foreach($infoAdmin as $info){
-                echo'<form class="change-password" action="controllers/EditProfilAdmin.php" method="POST">
+            foreach ($infoAdmin as $info) {
+                echo '<form class="change-password" action="controllers/EditProfilAdmin.php" method="POST">
                 <div class="input">
-                        <input class="input-form-editprofiladmin" type="text" name="oldfirstname" placeholder="Nom Admin" value="'.$info[1].'">
+                        <input type="hidden" name="idAdmin" value="' . $info[0] . '">
+                        <input class="input-form-editprofiladmin" type="text" name="oldfirstname" placeholder="Prénom Admin" value="' . $info[1] . '">
                     </div> <br>
                     <div class="input">
-                        <input class="input-form-editprofiladmin" type="text" name="oldlastname" placeholder="Prénom Admin" value="'.$info[2].'">
+                        <input class="input-form-editprofiladmin" type="text" name="oldlastname" placeholder="Nom Admin" value="' . $info[2] . '">
                     </div> <br>
                     <div class="input">
-                        <input class="input-form-editprofiladmin" type="text" name="oldemail" placeholder="email Admin" value="'.$info[3].'">
+                        <input class="input-form-editprofiladmin" type="text" name="oldemail" placeholder="email Admin" value="' . $info[3] . '">
                     </div> <br>
                     <div class="input">
-                        <input class="input-form-editprofiladmin" type="text" name="oldphonenumber" placeholder="téléphone Admin" value="'.$info[4].'">
-                    </div> <br>
-                    <div class="input">
-                    <input class="input-form-editprofiladmin" type="password" name="pass" placeholder="Entrer MDP pour valider">
-                </div> <br>
+                        <input class="input-form-editprofiladmin" type="text" name="oldphonenumber" placeholder="téléphone Admin" value="' . $info[4] . '">
+                    </div>                    
                     <div class="button-editprofiladmin" class="button">
                         <button type="submit">Valider changement</button>
                     </div>
             </div>
             </form>';
             }
-         ?>
+            ?>
 
 
-</div>
-    <?php include_once('assets/models/footer.html') ?>
+        </div>
+        <?php include_once('assets/models/footer.html') ?>
 </body>
 
 </html>

@@ -33,8 +33,8 @@ $dao = new DAO();
     <div class="wrapper">
       <table class="table table-bordered thead-dark table-striped">
         <tr>
-          <th>Nom</th>
           <th>Prénom</th>
+          <th>Nom</th>
           <th>Téléphone</th>
           <th>Email</th>
           <th>Action</th>
@@ -45,8 +45,8 @@ $dao = new DAO();
         foreach ($listAdmins as $admin) {
           echo '
                 <tr>
-                  <td>' . $admin[2] . '</td>
                   <td>' . $admin[1] . '</td>
+                  <td>' . $admin[2] . '</td>
                   <td>' . $admin[4] . '</td>
                   <td>' . $admin[3] . '</td>
                   <td>
@@ -74,10 +74,10 @@ $dao = new DAO();
         <form action="controllers/addAdmin.php" method="post" enctype="multipart/form-data">
           <div class="row">
             <div class="col-lg-12">
-              <input type="text" name="nom" placeholder="Nom *" required>
+              <input type="text" name="prenom" placeholder="Prenom *" required>
             </div>
             <div class="col-lg-12">
-              <input type="text" name="prenom" placeholder="Prenom *" required>
+              <input type="text" name="nom" placeholder="Nom *" required>
             </div>
             <div class="col-lg-12">
               <input type="email" name="email" placeholder="Email *" required>
@@ -115,10 +115,10 @@ $dao = new DAO();
                                 <div class="row">
                                 <div class="col-lg-12">             
                                   <input type="hidden" name="idAdmin" value="' . $admin[0] . '" >
-                                  <input type="text" name="oldfirstname" placeholder="Nom *" value="' . $admin[2] . '" required>
+                                  <input type="text" name="oldfirstname" placeholder="Prénom *" value="' . $admin[1] . '" required>
                                 </div> 
                                 <div class="col-lg-12">
-                                    <input type="text" name="oldlastname" placeholder="Prenom *" value="' . $admin[1] . '" required>
+                                    <input type="text" name="oldlastname" placeholder="Nom *" value="' . $admin[2] . '" required>
                                 </div>
                                 <div class="col-lg-12">
                                   <input type="email" name="oldemail" placeholder="Email *" value="' . $admin[3] . '" required>

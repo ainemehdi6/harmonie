@@ -24,16 +24,16 @@ $dao = new DAO();
     </div>
     <table>
       <tr>
-        <th>Nom</th>
         <th>Prénom</th>
+        <th>Nom</th>
       </tr>
       <?php
       $listUsers = $dao->listeUsers();
       foreach ($listUsers as $user) {
         echo '
                 <tr>
-                  <td><a href="markPresenceByName.php?userId=' . $user[0] . '">' . $user[2] . '</a></td>
                   <td><a href="markPresenceByName.php?userId=' . $user[0] . '">' . $user[1] . '</a></td>
+                  <td><a href="markPresenceByName.php?userId=' . $user[0] . '">' . $user[2] . '</a></td>
                 </tr>';
       }
       ?>

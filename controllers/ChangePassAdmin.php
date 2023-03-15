@@ -22,7 +22,3 @@
         header("location:../ChangePassAdmin.php?erreur=4");
                 die();
     }
-   
-    
-
-?>
