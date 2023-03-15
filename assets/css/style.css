@@ -194,11 +194,6 @@ table tr:not(:first-child):hover {
     min-width: 100%;
 }
 
-@media screen and (max-width: 414px) {
-    .title-one {
-        font-size: 1.5rem;
-    }
-}
 
 
 
@@ -952,6 +947,23 @@ job_post.post-popup,
     text-align: center;
 }
 
+@media screen and (max-width: 800px) {
+    .navbar {
+        display: none;
+    }
+
+    #nav {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    #mobile-menu {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 650px) {
     .post-popup {
         width: 350px;
@@ -960,5 +972,19 @@ job_post.post-popup,
 
     .post-project-fields {
         width: 88%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .title-one {
+        font-size: 1.5rem;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    #nav {
+        display: none;
     }
 }

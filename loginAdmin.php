@@ -65,10 +65,8 @@
             eyes[i].addEventListener("click", () => {
                 eyes[i].style.display = "none";
                 eyeoffs[i].style.display = "block";
-
                 passwordFields[i].type = "text";
             });
-
             eyeoffs[i].addEventListener("click", () => {
                 eyeoffs[i].style.display = "none";
                 eyes[i].style.display = "block";
