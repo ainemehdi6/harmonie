@@ -137,6 +137,10 @@ footer {
     width: fit-content;
 }
 
+.deletealluser:hover {
+    color: white
+}
+
 .btn-main {
     border-radius: 10px;
     padding: 5px;
@@ -604,6 +608,7 @@ a {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
+    margin: auto;
 
 }
 
@@ -628,6 +633,7 @@ a {
     display: block;
     text-align: center;
 }
+
 
 .texte h1 {
     margin-bottom: 10px;
@@ -673,6 +679,19 @@ a {
     margin-left: 10px;
 }
 
+.two_buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    font-size: 15px;
+}
+
+.btns-grp a:hover {
+    background-color: #34495e;
+    transform: scale(1.05);
+}
 
 
 

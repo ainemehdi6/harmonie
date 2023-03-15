@@ -34,17 +34,17 @@ $dao = new DAO();
         <input id="file-input" type="file" style="display:none;" />
 
         <div class="btns-grp">
-          <a href="controllers/importer.php" class="btn btn-main">exporter</a>
+          <a href="controllers/importer.php" class="btn btn-main btn-primary">exporter</a>
         </div>
       </form>
 
 
       <div class="btns-grp">
         <div class="btns-grp">
-          <a href="#" class="btn btn-main" onclick="AddUserBoxOn()">Ajouter</a>
+          <a href="#" class="btn btn-main btn-primary" onclick="AddUserBoxOn()">Ajouter</a>
         </div>
         <div class="btns-grp">
-          <a href="controllers/deleteAllUser.php" class="deletealluser" onclick="()">Supprimer la liste des membres</a>
+          <a href="controllers/deleteAllUser.php" class="deletealluser">Supprimer la liste des membres</a>
         </div>
       </div>
 
