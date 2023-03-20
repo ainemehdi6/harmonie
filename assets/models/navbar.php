@@ -1,6 +1,6 @@
 
 <!-- Blue with white text -->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+<nav id="nav" class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
 
   <!-- Links -->
   <ul class="navbar-nav">
@@ -22,6 +22,10 @@
     <li class="nav-item">
       <a class="nav-link" href="EditProfilAdmin.php">Modifier Profil Admin</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="controllers/logout.php">Déconnexion</a>
+    </li>
   </ul>
 
 </nav>
+
