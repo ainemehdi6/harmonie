@@ -195,7 +195,7 @@ $dao = new DAO();
           <strong>Tout les membres</strong> vont étre supprimer
         </div>
         <div class="modal-footer">
-          <a type="button" class="btn btn-primary" href="controllers/deleteAllUser.php">Comfirmer</a>
+          <a type="button" class="btn btn-primary" href="controllers/deletealluser.php">Comfirmer</a>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
         </div>
       </div>
