@@ -14,6 +14,7 @@ $dao = new DAO();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b9398f24d6.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/jpg" href="assets/images/favicon.JPG" />
     <title>Admin profil</title>
@@ -21,6 +22,8 @@ $dao = new DAO();
 </head>
 
 <body>
+<?php require('assets/models/navbar.php')?>
+
     <?php include_once('assets/models/headerAdmin.php') ?>
 
     <div class="container">
@@ -42,7 +45,7 @@ $dao = new DAO();
                     </div> <br>
                     <div class="input">
                         <input class="input-form-editprofiladmin" type="text" name="oldphonenumber" placeholder="téléphone Admin" value="' . $info[4] . '">
-                    </div>                    
+                    </div>
                     <div class="button-editprofiladmin" class="button">
                         <button type="submit">Valider changement</button>
                     </div>

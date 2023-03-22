@@ -8,7 +8,6 @@ $dao = new DAO();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,33 +17,32 @@ $dao = new DAO();
     <link rel="icon" type="image/jpg" href="assets/images/favicon.JPG" />
     <title>Accueil Admin</title>
 </head>
-
 <body>
-    <?php include_once('assets/models/headerAdmin.php') ?>
-    <main style="display:flex;">
+<?php include_once('assets/models/headerAdmin.php') ?>
+        <main style="display:flex;">
         <div class="buttons" style="margin:50px auto 0 auto;">
             <div class="button_font">
-                <a style="text-decoration: none;" href="UsersList.php" class="button"> Gestion des membres</a>
+                <a style="text-decoration: none; margin-bottom:15px;" href="UsersList.php" class="button"> Gestion des membres</a>
             </div>
 
             <div class="button_font">
-                <a style="text-decoration: none;" href="gestionEvents.php" class="button"> Gestion des évènements</a>
+                <a style="text-decoration: none; margin-bottom:15px;" href="GestionEvents.php" class="button"> Gestion des évènements</a>
             </div>
 
             <div class="button_font">
-                <a style="text-decoration: none;" href="gestionAdmins.php" class="button"> Gestion des Admins</a>
+                <a style="text-decoration: none; margin-bottom:15px;" href="GestionAdmins.php" class="button"> Gestion des Admins</a>
             </div>
 
             <div class="button_font">
-                <a style="text-decoration: none;" href="ChangePassUser.php" class="button"> Changer MDP User</a>
+                <a style="text-decoration: none; margin-bottom:15px;" href="ChangePassUser.php" class="button"> Changer MDP User</a>
             </div>
 
             <div class="button_font">
-                <a style="text-decoration: none;" href="ChangePassAdmin.php" class="button"> Modifier MDP Admin</a>
+                <a style="text-decoration: none; margin-bottom:15px;" href="ChangePassAdmin.php" class="button"> Modifier MDP Admin</a>
             </div>
 
             <div class="button_font">
-                <a style="text-decoration: none;" href="EditProfilAdmin.php" class="button"> Modifier Profil Admin</a>
+                <a style="text-decoration: none; margin-bottom:10px;" href="EditProfilAdmin.php" class="button"> Modifier Profil Admin</a>
             </div>
 
             <div class="deco">

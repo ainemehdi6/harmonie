@@ -29,11 +29,10 @@
         <div class="main">
             <h1 class="title" style="text-align:center">Se connecter en tant qu'administrateur</h1>
             <form action="controllers/loginAdmin.php" method="POST">
-                <label style="width:280px;margin:auto">
+                <label style="width:280px;margin:10px auto;">
                     <input class="label-info" type="text" name="email" placeholder="Email">
                 </label>
-                <br>
-                <label style="width:280px;margin:auto">
+                <label style="width:280px;margin:10px auto;">
                     <input class="label-info" type="password" name="password" placeholder="Mot de passe">
                     <div class="password-icon">
                         <i data-feather="eye"></i>
@@ -53,7 +52,6 @@
     </form>
 
     </div>
-    <?php include_once('assets/models/footer.html') ?>
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
         feather.replace();

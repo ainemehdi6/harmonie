@@ -19,32 +19,28 @@ $dao = new DAO();
 </head>
 
 <body>
+  <?php require('assets/models/navbar.php') ?>
+
   <?php include_once('assets/models/headerAdmin.php') ?>
 
 
   <main id="main">
     <h2 class="center-text">Liste des utilisateurs</h2>
     <div class="buttons_listusers">
-      <form class="upload" action="" method="POST" enctype="multipart/form-data">
-        <label for="file-input">
-          <div class="custom-file-upload">
-            <i class="fa fa-cloud-upload"></i> Choose File
-          </div>
-        </label>
-        <input id="file-input" type="file" style="display:none;" />
-
-        <div class="btns-grp">
-          <a href="controllers/importer.php" class="btn btn-main btn-primary">exporter</a>
-        </div>
-      </form>
+      <div class="btns-grp">
+        <button class="btn btn-main btn-primary" data-bs-toggle="modal" data-bs-target="#importer">Importer</button>
+        <a href="controllers/exporter.php" class="btn btn-main btn-primary">Exporter</a>
+      </div>
 
 
       <div class="btns-grp">
-        <div class="btns-grp">
-          <a href="#" class="btn btn-main btn-primary" onclick="AddUserBoxOn()">Ajouter</a>
+        <div class="btns-grp" style="margin:10px">
+          <a href="#" class="btn btn-main btn-primary" onclick="AddUserBoxOn()" style="margin:auto">Ajouter</a>
         </div>
-        <div class="btns-grp">
-          <a href="controllers/deleteAllUser.php" class="deletealluser">Supprimer la liste des membres</a>
+        <div class="btns-grp" style="margin:10px">
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAllUsers" style="height:fit-content;margin:auto">
+            Supprimer toute la liste des membres
+          </button>
         </div>
       </div>
 
@@ -184,6 +180,53 @@ $dao = new DAO();
   </div>';
   }
   ?>
+
+  <!-- Modal Delete all users-->
+  <div class="modal fade" id="deleteAllUsers" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confirmer la supression</h5>
+          <a type="button" class="btn btn-lg" style="background-color:white;" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+        </div>
+        <div class="modal-body">
+          <strong>Tout les membres</strong> vont étre supprimer
+        </div>
+        <div class="modal-footer">
+          <a type="button" class="btn btn-primary" href="controllers/deleteAllUser.php">Comfirmer</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Importer Fichier-->
+  <div class="modal fade" id="importer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Importer un fichier CSV</h5>
+          <a type="button" class="btn btn-lg" style="background-color:white;" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+        </div>
+        <div class="modal-body">
+          <form enctype="multipart/form-data" method="post" action="controllers/importer.php">
+            <div>
+              Sélectionner un fichier CSV :
+              <input class="form-control" name="file" type="file" id="file" accept=".csv" style="width:90%">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <input type="submit" name="submit" class="btn btn-primary" value="Importer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
   <?php include_once('assets/models/footer.html') ?>
 
   <script>

@@ -20,6 +20,8 @@ $dao = new DAO();
 </head>
 
 <body>
+<?php require('assets/models/navbar.php')?>
+
   <?php include_once('assets/models/headerAdmin.php') ?>
 
 

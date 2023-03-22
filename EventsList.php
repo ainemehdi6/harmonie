@@ -32,9 +32,9 @@
             foreach($listEvent as $event){
               echo'
                 <tr>
-                  <td><a href="EventPage.php?eventId='.$event[0].'">'.$event[3].'</a></td>
-                  <td><a href="EventPage.php?eventId='.$event[0].'">'.$event[1].'</a></td>
-                  <td><a href="EventPage.php?eventId='.$event[0].'">'.$event[2].'</a></td>
+                  <td style="white-space:pre-line;"><a href="EventPage.php?eventId='.$event[0].'">'.$event[3].'</a></td>
+                  <td style="white-space:pre-line;"><a href="EventPage.php?eventId='.$event[0].'">'.$event[1].'</a></td>
+                  <td style="white-space:pre-line;"><a href="EventPage.php?eventId='.$event[0].'">'.$event[2].'</a></td>
                 </tr>';
             }
           ?>

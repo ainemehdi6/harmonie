@@ -35,6 +35,18 @@ if (isset($_GET['eventId'])) {
     }
     ?>
 
+    <div class='two_buttons'>
+      <div class="btns-grp">
+        <a href="EventsList.php" class="btn btn-main">Liste des événements</a>
+      </div>
+      <div class="btns-grp">
+        <a href="EventUserList.php" class="btn btn-main">Liste des membres</a>
+      </div>
+
+    
+
+    </div>
+
     <table>
       <tr>
         <th>Nom</th>
@@ -48,7 +60,7 @@ if (isset($_GET['eventId'])) {
               <tr>
                 <td>' . $user[2] . '</td>
                 <td>' . $user[1] . '</td>
-                <td>
+                <td style="height:40px">
                     
                     <a ';
         if ($dao->UserIsPresent($user[0], $eventId) == "0") {
