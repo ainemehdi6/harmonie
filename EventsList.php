@@ -18,7 +18,7 @@
     <main>
         <h2 class="center-text">Liste des événements</h2>
         <div class="btns-grp">
-            <a href="EventUserList.php" class="btn btn-main">Liste des événements par nom</a>
+            <a href="EventUserList.php" class="btn btn-main">Liste des membres</a>
         </div>
         <div class="wrapper">
         <table>
