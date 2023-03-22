@@ -4,8 +4,8 @@ CREATE TABLE `admin` (
   `idAdmin` int NOT NULL AUTO_INCREMENT,
   `firstName` varchar(255) DEFAULT NULL,
   `lastName` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `phoneNumber` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL unique,
+  `phoneNumber` varchar(255) DEFAULT NULL unique,
   `password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`idAdmin`)
 );
@@ -29,8 +29,8 @@ CREATE TABLE `user` (
   `idUser` int NOT NULL AUTO_INCREMENT,
   `firstName` varchar(255) DEFAULT NULL,
   `lastName` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `phoneNumber` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL unique,
+  `phoneNumber` varchar(255) DEFAULT NULL unique,
   `role` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`idUser`)
 );
