@@ -4,7 +4,7 @@ if (!isset($_SESSION['idAdmin'])) {
     header("location:loginAdmin.php?erreur=2");
 }
 
-$link = mysqli_connect('127.0.0.1','root','','harmonie');
+$link = mysqli_connect('127.0.0.1', 'root', '', 'harmonie');
 
 if (isset($_POST['submit'])) {
     $filename = $_FILES['file']['tmp_name'];
@@ -12,10 +12,10 @@ if (isset($_POST['submit'])) {
         $file = fopen($filename, 'r');
         $header = fgetcsv($file, 1000, ',');
         $num_fields = count($header);
-        $sql = "INSERT INTO user (firstName, lastName, email, phoneNumber, role) VALUES (";
+        $sql = "INSERT INTO user (idUser,firstName, lastName, email, phoneNumber, role) VALUES (";
         $sql .= "'" . implode("','", $header) . "')";
         while (($data = fgetcsv($file, 1000, ',')) !== FALSE) {
-            $sql = "INSERT INTO user (firstName, lastName, email, phoneNumber, role) VALUES (";
+            $sql = "INSERT INTO user (idUser,firstName, lastName, email, phoneNumber, role) VALUES (";
             for ($i = 0; $i < $num_fields; $i++) {
                 $sql .= "'" . $data[$i] . "',";
             }
@@ -24,15 +24,19 @@ if (isset($_POST['submit'])) {
         }
         fclose($file);
         echo "Le fichier CSV a été importé avec succès !";
+        header("location:../UsersList.php");
     } else {
         echo "Le fichier est vide.";
+        header("location:../UsersList.php");
     }
 }
 ?>
 <html>
+
 <head>
     <title>Importer un fichier CSV</title>
 </head>
+
 <body>
     <form enctype="multipart/form-data" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <div>
@@ -43,4 +47,5 @@ if (isset($_POST['submit'])) {
         </div>
     </form>
 </body>
+
 </html>
