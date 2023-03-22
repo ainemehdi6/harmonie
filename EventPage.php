@@ -43,7 +43,7 @@ if (isset($_GET['eventId'])) {
         <a href="EventUserList.php" class="btn btn-main">Liste des membres</a>
       </div>
 
-    
+
 
     </div>
 
@@ -57,7 +57,7 @@ if (isset($_GET['eventId'])) {
       $listeUsers = $dao->listeUsers();
       foreach ($listeUsers as $user) {
         echo '
-              <tr>
+              <tr id="' . $user[0] . '">
                 <td>' . $user[2] . '</td>
                 <td>' . $user[1] . '</td>
                 <td style="height:40px">
