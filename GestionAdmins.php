@@ -20,7 +20,7 @@ $dao = new DAO();
 </head>
 
 <body>
-<?php require('assets/models/navbar.php')?>
+  <?php require('assets/models/navbar.php') ?>
 
   <?php include_once('assets/models/headerAdmin.php') ?>
 
@@ -42,27 +42,42 @@ $dao = new DAO();
           <th>Action</th>
         </tr>
         <?php
-
         $listAdmins = $dao->listAdmins($idAdmin);
         foreach ($listAdmins as $admin) {
+          if ($admin[0] == $idAdmin) {
+            echo '
+      <tr>
+        <td style="background-color:#409AF9">' . $admin[1] . '</td>
+        <td style="background-color:#409AF9" >' . $admin[2] . '</td>
+        <td  style="background-color:#409AF9" >' . $admin[4] . '</td>
+        <td style="background-color:#409AF9" >' . $admin[3] . '</td>';
+          }else{
+            echo '
+            <tr>
+              <td>' . $admin[1] . '</td>
+              <td>' . $admin[2] . '</td>
+              <td>' . $admin[4] . '</td>
+              <td>' . $admin[3] . '</td>';
+          }
+
+          if ($admin[0] != $idAdmin) {
+            echo '
+            <td>
+              <a href="#" class="btn btn-primary" onclick="EditAdminBoxOn(' . $admin[0] . ')">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteAdmin' . $admin[0] . '">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          ';
+          }
           echo '
-                <tr>
-                  <td>' . $admin[1] . '</td>
-                  <td>' . $admin[2] . '</td>
-                  <td>' . $admin[4] . '</td>
-                  <td>' . $admin[3] . '</td>
-                  <td>
-                    <a href="#" class="btn btn-primary" onclick="EditAdminBoxOn(' . $admin[0] . ')">
-                      <i class="fa-solid fa-pen-to-square"></i>
-                    </a>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteAdmin' . $admin[0] . '">
-                      <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                  
-                </tr>';
+      </tr>
+    ';
         }
         ?>
+
       </table>
     </div>
   </main>

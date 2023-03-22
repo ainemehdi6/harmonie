@@ -325,8 +325,8 @@ class DAO
 	public function listAdmins($idAdmin)
 	{
 		$bdd = $this->connexion();
-		$reponse = $bdd->prepare("SELECT * from admin where idAdmin!=?");
-		$reponse->execute([$idAdmin]);
+		$reponse = $bdd->prepare("SELECT * from admin");
+		$reponse->execute();
 		$lst = [];
 		while ($ligne = $reponse->fetch()) {
 			$lst[] = [$ligne[0], $ligne[1], $ligne[2], $ligne[3], $ligne[4], $ligne[5]];
