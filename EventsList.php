@@ -18,7 +18,7 @@
     <main>
         <h2 class="center-text">Liste des événements</h2>
         <div class="btns-grp">
-            <a href="EventUserList.php" class="btn btn-main">Liste des événements par nom</a>
+            <a href="EventUserList.php" class="btn btn-main">Liste des membres</a>
         </div>
         <div class="wrapper">
         <table>
@@ -32,9 +32,9 @@
             foreach($listEvent as $event){
               echo'
                 <tr>
-                  <td><a href="EventPage.php?eventId='.$event[0].'">'.$event[3].'</a></td>
-                  <td><a href="EventPage.php?eventId='.$event[0].'">'.$event[1].'</a></td>
-                  <td><a href="EventPage.php?eventId='.$event[0].'">'.$event[2].'</a></td>
+                  <td style="white-space:pre-line;"><a href="EventPage.php?eventId='.$event[0].'">'.$event[3].'</a></td>
+                  <td style="white-space:pre-line;"><a href="EventPage.php?eventId='.$event[0].'">'.$event[1].'</a></td>
+                  <td style="white-space:pre-line;"><a href="EventPage.php?eventId='.$event[0].'">'.$event[2].'</a></td>
                 </tr>';
             }
           ?>

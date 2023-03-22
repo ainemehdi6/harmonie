@@ -16,8 +16,8 @@ $dao = new DAO();
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/b9398f24d6.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/jpg" href="assets/images/favicon.JPG" />
+    <script src="https://kit.fontawesome.com/b9398f24d6.js" crossorigin="anonymous"></script>
     <title>Gestion des événements</title>
 </head>
 
@@ -45,10 +45,10 @@ $dao = new DAO();
                 foreach ($listEvent as $event) {
                     echo '
                 <tr>
-                    <td>' . $event[3] . '</td>
-                    <td>' . $event[1] . '</td>
-                    <td>' . $event[2] . '</td>
-                    <td>' . $event[4] . '</td>
+                    <td style="white-space:pre-line;">' . $event[3] . '</td>
+                    <td style="white-space:pre-line;">' . $event[1] . '</td>
+                    <td style="white-space:pre-line;">' . $event[2] . '</div></td>
+                    <td style="white-space:pre-line;">' . $event[4] . '</td>
                     <td>' . $dao->NumberOfPresents($event[0]) . '/' . $dao->NumberOfMembers() . '</td>
                     <td>
                         <a href="EventDetail.php?idEvent=' . $event[0] . '" class="btn btn-primary" >

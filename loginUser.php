@@ -48,7 +48,6 @@
 
 
     </div>
-    <?php include_once('assets/models/footer.html') ?>
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
         feather.replace();

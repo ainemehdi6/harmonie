@@ -12,3 +12,5 @@
 		header("location:../GestionEvents.php?erreur=2");
 		die();
 	}
+
+?>
