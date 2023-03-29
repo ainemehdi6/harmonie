@@ -26,7 +26,7 @@ $dao = new DAO();
 
   <main id="main">
     <h2 class="center-text">Liste des utilisateurs</h2>
-    <div class="buttons_listusers">
+    <div class="buttons_listusers wrapper">
       <div class="btns-grp">
         <button class="btn btn-main btn-primary" data-bs-toggle="modal" data-bs-target="#importer">Importer</button>
         <a href="controllers/exporter.php" class="btn btn-main btn-primary">Exporter</a>

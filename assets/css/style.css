@@ -198,6 +198,8 @@ table tr:not(:first-child):hover {
     .title-one {
         font-size: 1.5rem;
     }
+
+    
 }
 
 
@@ -254,7 +256,6 @@ label .password-icon:hover {
 label .password-icon .feather-eye-off {
     display: none;
 }
-
 
 
 
