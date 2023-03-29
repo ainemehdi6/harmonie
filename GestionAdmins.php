@@ -47,10 +47,19 @@ $dao = new DAO();
           if ($admin[0] == $idAdmin) {
             echo '
       <tr>
-        <td style="background-color:#409AF9">' . $admin[1] . '</td>
-        <td style="background-color:#409AF9" >' . $admin[2] . '</td>
-        <td  style="background-color:#409AF9" >' . $admin[4] . '</td>
-        <td style="background-color:#409AF9" >' . $admin[3] . '</td>';
+        <td style="background-color:#DAF7A6">' . $admin[1] . '</td>
+        <td style="background-color:#DAF7A6" >' . $admin[2] . '</td>
+        <td  style="background-color:#DAF7A6" >' . $admin[4] . '</td>
+        <td style="background-color:#DAF7A6" >' . $admin[3] . '</td>
+        <td style="background-color:#DAF7A6" >
+        <button type="button" disabled class="btn btn-primary">
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+              <button type="button" disabled class="btn btn-primary">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>'
+        ;
           }else{
             echo '
             <tr>
