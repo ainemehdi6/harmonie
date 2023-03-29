@@ -47,7 +47,7 @@ if (isset($_GET['eventId'])) {
 
     </div>
 
-    <table>
+    <table class="wrapper">
       <tr>
         <th>Nom</th>
         <th>Prénom</th>
