@@ -199,7 +199,7 @@ table tr:not(:first-child):hover {
         font-size: 1.5rem;
     }
 
-    
+
 }
 
 
@@ -997,6 +997,12 @@ job_post.post-popup,
 
     #nav {
         display: none;
+    }
+
+    .post-project-fields form input,
+    .post-project-fields form textarea,
+    .post-project-fields form select {
+        width: 85%;
     }
 }
 

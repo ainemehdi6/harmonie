@@ -51,8 +51,8 @@ $dao = new DAO();
     <div class="wrapper">
       <table class="table table-bordered thead-dark table-striped">
         <tr>
-          <th>Prénom</th>
           <th>Nom</th>
+          <th>Prénom</th>
           <th>Téléphone</th>
           <th>Email</th>
           <th>Action</th>
@@ -63,8 +63,8 @@ $dao = new DAO();
         foreach ($listUsers as $user) {
           echo '
                 <tr>
-                  <td>' . $user[1] . '</td>
                   <td>' . $user[2] . '</td>
+                  <td>' . $user[1] . '</td>
                   <td>' . $user[4] . '</td>
                   <td>' . $user[3] . '</td>
                   <td>
@@ -172,7 +172,7 @@ $dao = new DAO();
         <strong>' . $user[1] . ' ' . $user[2] . '</strong> va étre supprimé
       </div>
         <div class="modal-footer">
-          <a type="button" class="btn btn-primary" href="controllers/deleteUser.php?idUser=' . $user[0] . '">Comfirmer</a>
+          <a type="button" class="btn btn-primary" href="controllers/deleteUser.php?idUser=' . $user[0] . '">Confirmer</a>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
         </div>
       </div>
@@ -195,7 +195,7 @@ $dao = new DAO();
           <strong>Tout les membres</strong> vont étre supprimer
         </div>
         <div class="modal-footer">
-          <a type="button" class="btn btn-primary" href="controllers/deleteAllUser.php">Comfirmer</a>
+          <a type="button" class="btn btn-primary" href="controllers/deleteAllUser.php">Confirmer</a>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
         </div>
       </div>

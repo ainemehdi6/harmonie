@@ -35,6 +35,7 @@ $dao = new DAO();
                 <tr>
                     <th>Date et heure</th>
                     <th>Titre</th>
+                    <th>Lieu</th>
                     <th>Description</th>
                     <th>Statut</th>
                     <th>Nbr de participants</th>
@@ -46,6 +47,7 @@ $dao = new DAO();
                     echo '
                 <tr>
                     <td style="white-space:pre-line;">' . $event[3] . '</td>
+                    <td style="white-space:pre-line;">' . $event[1] . '</td>
                     <td style="white-space:pre-line;">' . $event[1] . '</td>
                     <td style="white-space:pre-line;">' . $event[2] . '</div></td>
                     <td style="white-space:pre-line;">' . $event[4] . '</td>
@@ -158,7 +160,7 @@ $dao = new DAO();
         L\'événement <strong>' . $event[1] . '</strong> va étre supprimé
       </div>
         <div class="modal-footer">
-          <a type="button" class="btn btn-primary" href="controllers/deleteEvent.php?idEvent=' . $event[0] . '">Comfirmer</a>
+          <a type="button" class="btn btn-primary" href="controllers/deleteEvent.php?idEvent=' . $event[0] . '">Confirmer</a>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
         </div>
       </div>

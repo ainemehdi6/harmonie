@@ -46,7 +46,7 @@
                     <button type="submit">Se connecter</button>
                 </div>
 
-                <a href="#" class="link-problem">Problème de <br> connexion ?</a>
+              
         </div>
     </div>
     </form>

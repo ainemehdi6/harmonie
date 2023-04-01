@@ -42,7 +42,7 @@
                     <button type="submit">Se connecter</button>
                 </div>
 
-                <a href="" class="problem-link">Problème de <br> connexion ?</a>
+                <a href="FormContactAdmin.php" class="problem-link">Problème de <br> connexion ?</a>
             </form>
         </div>
 
