@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="header_txt">
-            <h2>Bienvenue</h2>
+            <h2>Bienvenue sur la plateforme de planification des évènements musicaux, harmonie de Bergues</h2>
         </div>
     </header>
     <hr>
@@ -42,7 +42,7 @@
                     <button type="submit">Se connecter</button>
                 </div>
 
-                <a href="" class="problem-link">Problème de <br> connexion ?</a>
+                <a href="FormContactAdmin.php" class="problem-link">Problème de <br> connexion ?</a>
             </form>
         </div>
 

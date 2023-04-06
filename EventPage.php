@@ -46,7 +46,7 @@ if (isset($_GET['eventId'])) {
 
 
     </div>
-
+<div class="wrapper">
     <table>
       <tr>
         <th>Nom</th>
@@ -62,6 +62,7 @@ if (isset($_GET['eventId'])) {
                 <td>' . $user[1] . '</td>
                 <td style="height:40px">
                     
+                    
                     <a ';
         if ($dao->UserIsPresent($user[0], $eventId) == "0") {
           echo 'href="controllers/markPresence.php?userId=' . $user[0] . '&eventId=' . $eventId . '&page=EventPage&type=present"';
@@ -71,6 +72,8 @@ if (isset($_GET['eventId'])) {
         echo 'class="btn btn-present">Présent</a>
                     <a href="controllers/markPresence.php?userId=' . $user[0] . '&eventId=' . $eventId . '&page=EventPage&type=abs" class="btn btn-absent"';
         echo '>Absent</a>
+     
+       
                 </td>
               </tr>
 
@@ -78,7 +81,7 @@ if (isset($_GET['eventId'])) {
       }
       ?>
     </table>
-
+ </div>
   </main>
   <?php include_once('assets/models/footer.html') ?>
 </body>

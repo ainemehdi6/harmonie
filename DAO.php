@@ -229,11 +229,11 @@ class DAO
 		return $lst;
 	}
 
-	public function AddEvent($titre, $description, $date, $idAdmin)
+	public function AddEvent($titre, $lieu, $description, $date, $idAdmin)
 	{
 		$bdd = $this->connexion();
-		$reponse = $bdd->prepare("INSERT INTO event(titre,description,date,idAdmin) values(?,?,?,?)");
-		$reponse->execute([$titre, $description, $date, $idAdmin]);
+		$reponse = $bdd->prepare("INSERT INTO event(titre,lieu,description,date,idAdmin) values(?,?,?,?,?)");
+		$reponse->execute([$titre, $lieu, $description, $date, $idAdmin]);
 		if ($ligne = $reponse->fetch()) return true;
 		else return false;
 	}
@@ -267,11 +267,11 @@ class DAO
 		}
 	}
 
-	public function EditEvent($titre, $description, $date, $statut, $idEvent)
+	public function EditEvent($titre, $lieu, $description, $date, $statut, $idEvent)
 	{
 		$bdd = $this->connexion();
-		$reponse = $bdd->prepare("UPDATE event set titre=?,description=?,date=?,statut=? where idEvent=?");
-		$reponse->execute([$titre, $description, $date, $statut, $idEvent]);
+		$reponse = $bdd->prepare("UPDATE event set titre=?,lieu=?,description=?,date=?,statut=? where idEvent=?");
+		$reponse->execute([$titre, $lieu, $description, $date, $statut, $idEvent]);
 		if ($ligne = $reponse->fetch()) return true;
 		else return false;
 	}
@@ -325,8 +325,8 @@ class DAO
 	public function listAdmins($idAdmin)
 	{
 		$bdd = $this->connexion();
-		$reponse = $bdd->prepare("SELECT * from admin where idAdmin!=?");
-		$reponse->execute([$idAdmin]);
+		$reponse = $bdd->prepare("SELECT * from admin");
+		$reponse->execute();
 		$lst = [];
 		while ($ligne = $reponse->fetch()) {
 			$lst[] = [$ligne[0], $ligne[1], $ligne[2], $ligne[3], $ligne[4], $ligne[5]];

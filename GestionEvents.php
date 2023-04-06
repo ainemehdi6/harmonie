@@ -35,6 +35,7 @@ $dao = new DAO();
                 <tr>
                     <th>Date et heure</th>
                     <th>Titre</th>
+                    <th>Lieu</th>
                     <th>Description</th>
                     <th>Statut</th>
                     <th>Nbr de participants</th>
@@ -45,10 +46,11 @@ $dao = new DAO();
                 foreach ($listEvent as $event) {
                     echo '
                 <tr>
-                    <td style="white-space:pre-line;">' . $event[3] . '</td>
-                    <td style="white-space:pre-line;">' . $event[1] . '</td>
-                    <td style="white-space:pre-line;">' . $event[2] . '</div></td>
                     <td style="white-space:pre-line;">' . $event[4] . '</td>
+                    <td style="white-space:pre-line;">' . $event[1] . '</td>
+                    <td style="white-space:pre-line;">' . $event[2] . '</td>
+                    <td style="white-space:pre-line;">' . $event[3] . '</div></td>
+                    <td style="white-space:pre-line;">' . $event[5] . '</td>
                     <td>' . $dao->NumberOfPresents($event[0]) . '/' . $dao->NumberOfMembers() . '</td>
                     <td>
                         <a href="EventDetail.php?idEvent=' . $event[0] . '" class="btn btn-primary" >
@@ -78,6 +80,9 @@ $dao = new DAO();
                     <div class="row">
                         <div class="col-lg-12">
                             <input type="text" name="titre" placeholder="Titre d'événement">
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="text" name="lieu" placeholder="lieu de l'événement">
                         </div>
                         <div class="col-lg-12">
                             <input type="text" name="description" placeholder="Description d'événement">
@@ -115,14 +120,17 @@ $dao = new DAO();
                                         <input type="text" name="titre" value="' . $event[1] . '" placeholder="Titre d\'événement">
                                     </div>
                                     <div class="col-lg-12">
-                                        <input type="text" name="description" value="' . $event[2] . '" placeholder="Description d\'événement">
+                                    <input type="text" name="lieu" value="' . $event[2] . '" placeholder="lieu d\'événement">
+                                </div>
+                                    <div class="col-lg-12">
+                                        <input type="text" name="description" value="' . $event[3] . '" placeholder="Description d\'événement">
                                     </div>
                                     <div class="col-lg-12">
-                                        <input type="datetime-local" name="date" value="' . $event[3] . '">
+                                        <input type="datetime-local" name="date" value="' . $event[4] . '">
                                     </div>
                                     <div class="col-lg-12">
                                         <select name="statut">
-                                            <option value="' . $event[4] . '">' . $event[4] . '</option>
+                                            <option value="' . $event[5] . '">' . $event[5] . '</option>
                                             <option value="En cours">En cours</option>
                                             <option value="Passé">Passé</option>
                                             <option value="Annulé">Annulé</option>
@@ -158,7 +166,7 @@ $dao = new DAO();
         L\'événement <strong>' . $event[1] . '</strong> va étre supprimé
       </div>
         <div class="modal-footer">
-          <a type="button" class="btn btn-primary" href="controllers/deleteEvent.php?idEvent=' . $event[0] . '">Comfirmer</a>
+          <a type="button" class="btn btn-primary" href="controllers/deleteEvent.php?idEvent=' . $event[0] . '">Confirmer</a>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
         </div>
       </div>
