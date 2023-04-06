@@ -46,7 +46,11 @@ if (isset($_GET['eventId'])) {
     
 
     </div>
+<<<<<<< HEAD
     <div class="wrapper">
+=======
+<div class="wrapper">
+>>>>>>> 0a420e6451be4b172bc253620dc7a9fe5ac080f8
     <table>
       <tr>
         <th>Nom</th>
@@ -63,6 +67,7 @@ if (isset($_GET['eventId'])) {
         if (!$dao->UserIsPresent($user[0], $eventId) == "0") {
           echo '
                 <td style="height:40px">
+<<<<<<< HEAD
                   <a style="color: currentColor;cursor: not-allowed;text-decoration: none; background-color:green; border:green;color:white;" class="btn btn-present">Présent</a>
                   <a href="controllers/markPresence.php?userId=' . $user[0] . '&eventId=' . $eventId . '&page=EventPage&type=abs" class="btn btn-absent" style="text-decoration: none; background-color:grey; border:none;color:white;">Absent</a>
                 </td>';
@@ -74,12 +79,33 @@ if (isset($_GET['eventId'])) {
                 </td>';
         }
         echo '</tr>
+=======
+                    
+                    
+                    <a ';
+        if ($dao->UserIsPresent($user[0], $eventId) == "0") {
+          echo 'href="controllers/markPresence.php?userId=' . $user[0] . '&eventId=' . $eventId . '&page=EventPage&type=present"';
+        } else {
+          echo 'href=""  role="link" aria-disabled="true" style="color: currentColor;cursor: not-allowed;opacity: 0.5;text-decoration: none; background-color:green; border:green;color:white;"';
+        };
+        echo 'class="btn btn-present">Présent</a>
+                    <a href="controllers/markPresence.php?userId=' . $user[0] . '&eventId=' . $eventId . '&page=EventPage&type=abs" class="btn btn-absent"';
+        echo '>Absent</a>
+     
+       
+                </td>
+              </tr>
+>>>>>>> 0a420e6451be4b172bc253620dc7a9fe5ac080f8
 
             ';
       }
       ?>
     </table>
+<<<<<<< HEAD
   </div>
+=======
+ </div>
+>>>>>>> 0a420e6451be4b172bc253620dc7a9fe5ac080f8
   </main>
   <?php include_once('assets/models/footer.html') ?>
 </body>

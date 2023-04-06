@@ -20,7 +20,7 @@ $dao = new DAO();
 </head>
 
 <body>
-<?php require('assets/models/navbar.php')?>
+  <?php require('assets/models/navbar.php') ?>
 
   <?php include_once('assets/models/headerAdmin.php') ?>
 
@@ -52,7 +52,11 @@ $dao = new DAO();
         <td  style="background-color:#DAF7A6" >' . $admin[4] . '</td>
         <td style="background-color:#DAF7A6" >' . $admin[3] . '</td>
         <td style="background-color:#DAF7A6" >
+<<<<<<< HEAD
         <button type="button" disabled class="btn btn-primary" style="">
+=======
+        <button type="button" disabled class="btn btn-primary">
+>>>>>>> 0a420e6451be4b172bc253620dc7a9fe5ac080f8
                 <i class="fa-solid fa-pen-to-square"></i>
                 </button>
               <button type="button" disabled class="btn btn-primary">
