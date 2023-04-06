@@ -4,7 +4,7 @@ if (!isset($_SESSION['idAdmin'])) {
     header("location:loginAdmin.php?erreur=2");
 }
 
-$link = mysqli_connect('harmonie_db','harmonie','>{G4c(CzYhB*','base');
+$link = mysqli_connect('127.0.0.1', 'root', '', 'harmonie');
 $sql = "SELECT * FROM user";
 
 if ($result = mysqli_query($link, $sql)) {
@@ -15,12 +15,12 @@ if ($result = mysqli_query($link, $sql)) {
         // Create a file pointer 
         $f = fopen('php://memory', 'w');
         // Set column headers 
-        $fields = array('idUser', 'firstName', 'lastName', 'email', 'phoneNumber', 'role');
+        $fields = array('ID', 'Prenom', 'Nom', 'Email', 'Numero de téléphone', 'Role', 'Pupitre');
         fputcsv($f, $fields, $delimiter);
 
         // Output each row of the data, format line as csv and write to file pointer 
         while ($row = mysqli_fetch_assoc($result)) {
-            $lineData = array($row['idUser'], $row['firstName'], $row['lastName'], $row['email'], $row['phoneNumber'], $row['role']);
+            $lineData = array($row['idUser'], $row['firstName'], $row['lastName'], $row['email'], $row['phoneNumber'], $row['role'], $row['pupitre']);
             fputcsv($f, $lineData, $delimiter);
         }
 
@@ -52,5 +52,3 @@ if ($result = mysqli_query($link, $sql)) {
 }
 
 exit();
-
-?>

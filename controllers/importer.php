@@ -4,7 +4,7 @@ if (!isset($_SESSION['idAdmin'])) {
     header("location:loginAdmin.php?erreur=2");
 }
 
-$link = mysqli_connect('harmonie_db','harmonie','>{G4c(CzYhB*','base');
+$link = mysqli_connect('harmonie_db', 'harmonie', '>{G4c(CzYhB*', 'base');
 
 if (isset($_POST['submit'])) {
     $filename = $_FILES['file']['tmp_name'];
@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
         $header = fgetcsv($file, 1000, ',');
         $num_fields = count($header);
         while (($data = fgetcsv($file, 1000, ',')) !== FALSE) {
-            $sql = "INSERT IGNORE INTO user (idUser,firstName, lastName, email, phoneNumber, role) VALUES (";
+            $sql = "INSERT IGNORE INTO user (idUser,firstName, lastName, email, phoneNumber, role, pupitre) VALUES (";
             for ($i = 0; $i < $num_fields; $i++) {
                 $sql .= "'" . $data[$i] . "',";
             }

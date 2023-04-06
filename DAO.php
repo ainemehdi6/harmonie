@@ -162,7 +162,7 @@ class DAO
 		$reponse->execute([]);
 		$lst = [];
 		while ($ligne = $reponse->fetch()) {
-			$lst[] = [$ligne[0], $ligne[1], $ligne[2], $ligne[3], $ligne[4], $ligne[5], $ligne[5]];
+			$lst[] = [$ligne[0], $ligne[1], $ligne[2], $ligne[3], $ligne[4], $ligne[5], $ligne[6]];
 		}
 		$reponse->closeCursor();
 		return $lst;
