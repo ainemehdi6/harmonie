@@ -43,42 +43,43 @@ if (isset($_GET['eventId'])) {
         <a href="EventUserList.php" class="btn btn-main">Liste des membres</a>
       </div>
 
-
+    
 
     </div>
-
+    <div class="wrapper">
     <table>
       <tr>
         <th>Nom</th>
         <th>Prénom</th>
         <th>Présence</th>
       </tr>
-      <?php
+            <?php
       $listeUsers = $dao->listeUsers();
       foreach ($listeUsers as $user) {
         echo '
               <tr id="' . $user[0] . '">
                 <td>' . $user[2] . '</td>
-                <td>' . $user[1] . '</td>
+                <td>' . $user[1] . '</td>';
+        if (!$dao->UserIsPresent($user[0], $eventId) == "0") {
+          echo '
                 <td style="height:40px">
-                    
-                    <a ';
-        if ($dao->UserIsPresent($user[0], $eventId) == "0") {
-          echo 'href="controllers/markPresence.php?userId=' . $user[0] . '&eventId=' . $eventId . '&page=EventPage&type=present"';
+                  <a style="color: currentColor;cursor: not-allowed;text-decoration: none; background-color:green; border:green;color:white;" class="btn btn-present">Présent</a>
+                  <a href="controllers/markPresence.php?userId=' . $user[0] . '&eventId=' . $eventId . '&page=EventPage&type=abs" class="btn btn-absent" style="text-decoration: none; background-color:grey; border:none;color:white;">Absent</a>
+                </td>';
         } else {
-          echo 'href=""  role="link" aria-disabled="true" style="color: currentColor;cursor: not-allowed;opacity: 0.5;text-decoration: none; background-color:green; border:green;color:white;"';
-        };
-        echo 'class="btn btn-present">Présent</a>
-                    <a href="controllers/markPresence.php?userId=' . $user[0] . '&eventId=' . $eventId . '&page=EventPage&type=abs" class="btn btn-absent"';
-        echo '>Absent</a>
-                </td>
-              </tr>
+          echo '
+                <td style="height:40px">
+                  <a class="btn btn-absent" href="controllers/markPresence.php?userId=' . $user[0] . '&eventId=' . $eventId . '&page=EventPage&type=present" style="text-decoration: none; background-color:grey; border:none;color:white;">Présent</a>
+                  <a role="link" aria-disabled="true" style="color: currentColor;cursor: not-allowed;text-decoration: none; background-color:red; border:red;color:white;" class="btn btn-present">Absent</a>
+                </td>';
+        }
+        echo '</tr>
 
             ';
       }
       ?>
     </table>
-
+  </div>
   </main>
   <?php include_once('assets/models/footer.html') ?>
 </body>

@@ -4,7 +4,7 @@ if (!isset($_SESSION['idAdmin'])) {
     header("location:loginAdmin.php?erreur=2");
 }
 
-$link = mysqli_connect('127.0.0.1', 'root', '', 'harmonie');
+$link = mysqli_connect('harmonie_db','harmonie','>{G4c(CzYhB*','base');
 $sql = "SELECT * FROM user";
 
 if ($result = mysqli_query($link, $sql)) {
@@ -52,3 +52,5 @@ if ($result = mysqli_query($link, $sql)) {
 }
 
 exit();
+
+?>

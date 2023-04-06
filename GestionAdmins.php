@@ -42,27 +42,51 @@ $dao = new DAO();
           <th>Action</th>
         </tr>
         <?php
-
         $listAdmins = $dao->listAdmins($idAdmin);
         foreach ($listAdmins as $admin) {
+          if ($admin[0] == $idAdmin) {
+            echo '
+      <tr>
+        <td style="background-color:#DAF7A6">' . $admin[1] . '</td>
+        <td style="background-color:#DAF7A6" >' . $admin[2] . '</td>
+        <td  style="background-color:#DAF7A6" >' . $admin[4] . '</td>
+        <td style="background-color:#DAF7A6" >' . $admin[3] . '</td>
+        <td style="background-color:#DAF7A6" >
+        <button type="button" disabled class="btn btn-primary" style="">
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+              <button type="button" disabled class="btn btn-primary">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>'
+        ;
+          }else{
+            echo '
+            <tr>
+              <td>' . $admin[1] . '</td>
+              <td>' . $admin[2] . '</td>
+              <td>' . $admin[4] . '</td>
+              <td>' . $admin[3] . '</td>';
+          }
+
+          if ($admin[0] != $idAdmin) {
+            echo '
+            <td>
+              <a href="#" class="btn btn-primary" onclick="EditAdminBoxOn(' . $admin[0] . ')">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteAdmin' . $admin[0] . '">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </td>
+          ';
+          }
           echo '
-                <tr>
-                  <td>' . $admin[1] . '</td>
-                  <td>' . $admin[2] . '</td>
-                  <td>' . $admin[4] . '</td>
-                  <td>' . $admin[3] . '</td>
-                  <td>
-                    <a href="#" class="btn btn-primary" onclick="EditAdminBoxOn(' . $admin[0] . ')">
-                      <i class="fa-solid fa-pen-to-square"></i>
-                    </a>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteAdmin' . $admin[0] . '">
-                      <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                  
-                </tr>';
+      </tr>
+    ';
         }
         ?>
+
       </table>
     </div>
   </main>
@@ -88,7 +112,7 @@ $dao = new DAO();
               <input type="phone" name="telephone" placeholder="Téléphone">
             </div>
             <div class="col-lg-12">
-              <input type="password" name="password" id="password" placeholder="password">
+              <input type="password" name="password" id="password" placeholder="password *" required>
             </div>
             <div class="col-lg-12">
               <button class="btn btn-primary btn-lg btn-block" name="submit" type="submit" value="post">Ajouter</button>
@@ -158,7 +182,7 @@ $dao = new DAO();
         L\'admin <strong>' . $admin[1] . ' ' . $admin[2] . '</strong> va étre supprimé
       </div>
         <div class="modal-footer">
-          <a type="button" class="btn btn-primary" href="controllers/deleteAdmin.php?idAdmin=' . $admin[0] . '">Comfirmer</a>
+          <a type="button" class="btn btn-primary" href="controllers/deleteAdmin.php?idAdmin=' . $admin[0] . '">Confirmer</a>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
         </div>
       </div>

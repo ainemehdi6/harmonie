@@ -4,7 +4,7 @@ if (!isset($_SESSION['idAdmin'])) {
     header("location:loginAdmin.php?erreur=2");
 }
 
-$link = mysqli_connect('127.0.0.1', 'root', '', 'harmonie');
+$link = mysqli_connect('harmonie_db','harmonie','>{G4c(CzYhB*','base');
 
 if (isset($_POST['submit'])) {
     $filename = $_FILES['file']['tmp_name'];
@@ -23,10 +23,8 @@ if (isset($_POST['submit'])) {
             mysqli_query($link, $sql);
         }
         fclose($file);
-        echo "Le fichier XLSX a été importé avec succès !";
         header("location:../UsersList.php");
     } else {
-        echo "Le fichier est vide.";
         header("location:../UsersList.php?ErrorFileType=true");
     }
 }

@@ -17,8 +17,9 @@
     <?php include_once('assets/models/header.html') ?>
     <main>
         <h2 class="center-text">Liste des événements</h2>
-        <div class="btns-grp">
+        <div class="btnS">
             <a href="EventUserList.php" class="btn btn-main">Liste des membres</a>
+            <a href="EventsList.php" id="listbutt"  class="btn btn-main">Liste des événements</a>
         </div>
         <div class="wrapper">
         <table>

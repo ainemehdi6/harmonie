@@ -37,21 +37,30 @@
             <th>Description</th>
             <th>Présence</th>
           </tr>
-          <?php 
-            $listEvent = $dao->listeEvents();
-            foreach($listEvent as $event){
-              echo'
-                <tr>
-                  <td style="white-space:pre-line;">'.$event[3].'</td>
-                  <td style="white-space:pre-line;">'.$event[1].'</td>
-                  <td style="white-space:pre-line;">'.$event[2].'</td>
-                  <td>  
-                    <a ';if($dao->UserIsPresent($userId,$event[0])=="0"){echo 'href="controllers/markPresence.php?userId='.$userId.'&eventId='.$event[0].'&page=markPresenceByName&type=present"';}else{echo'href=""  role="link" aria-disabled="true" style="color: currentColor;cursor: not-allowed;opacity: 0.5;text-decoration: none; background-color:green; border:green;color:white;"';};  echo'class="btn btn-present">Présent</a>
-                    <a href="controllers/markPresence.php?userId='.$userId.'&eventId='.$event[0].'&page=markPresenceByName&type=abs" class="btn btn-absent"';  echo'>Absent</a>
-                </td>
-                </tr>';
-            }
-          ?>
+        <?php
+        $listEvent = $dao->listeEvents();
+        foreach ($listEvent as $event) {
+          echo '
+                <tr id="' . $event[0] . '">
+                  <td style="white-space:pre-line;">' . $event[3] . '</td>
+                  <td style="white-space:pre-line;">' . $event[1] . '</td>
+                  <td style="white-space:pre-line;">' . $event[2] . '</td>';
+          if (!$dao->UserIsPresent($userId, $event[0]) == "0") {
+            echo '
+                          <td style="height:40px">
+                            <a style="color: currentColor;cursor: not-allowed;text-decoration: none; background-color:green; border:green;color:white;" class="btn btn-present">Présent</a>
+                            <a href="controllers/markPresence.php?userId=' . $userId . '&eventId=' . $event[0] . '&page=markPresenceByName&type=abs" class="btn btn-absent" style="text-decoration: none; background-color:grey; border:none;color:white;">Absent</a>
+                          </td>';
+          } else {
+            echo '
+                          <td style="height:40px">
+                            <a class="btn btn-absent" href="controllers/markPresence.php?userId=' . $userId . '&eventId=' . $event[0] . '&page=markPresenceByName&type=present" style="text-decoration: none; background-color:grey; border:none;color:white;">Présent</a>
+                            <a role="link" aria-disabled="true" style="color: currentColor;cursor: not-allowed;text-decoration: none; background-color:red; border:red;color:white;" class="btn btn-present">Absent</a>
+                          </td>';
+          }
+          echo '</tr>';
+        }
+        ?>
         </table>
         </div>
 

@@ -22,7 +22,7 @@ $dao = new DAO();
 </head>
 
 <body>
-<?php require('assets/models/navbar.php')?>
+    <?php require('assets/models/navbar.php') ?>
 
     <?php include_once('assets/models/headerAdmin.php') ?>
     <main id="main">
@@ -35,6 +35,7 @@ $dao = new DAO();
                 <tr>
                     <th>Date et heure</th>
                     <th>Titre</th>
+                    <th>Lieu</th>
                     <th>Description</th>
                     <th>Statut</th>
                     <th>Nbr de participants</th>
@@ -47,6 +48,7 @@ $dao = new DAO();
                 <tr>
                     <td style="white-space:pre-line;">' . $event[3] . '</td>
                     <td style="white-space:pre-line;">' . $event[1] . '</td>
+                    <td style="white-space:pre-line;">' . $event[6] . '</td>
                     <td style="white-space:pre-line;">' . $event[2] . '</div></td>
                     <td style="white-space:pre-line;">' . $event[4] . '</td>
                     <td>' . $dao->NumberOfPresents($event[0]) . '/' . $dao->NumberOfMembers() . '</td>
@@ -77,13 +79,16 @@ $dao = new DAO();
                 <form action="controllers/addEvent.php" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-lg-12">
-                            <input type="text" name="titre" placeholder="Titre d'événement">
+                            <input type="text" name="titre" placeholder="Titre d'événement *" required>
                         </div>
                         <div class="col-lg-12">
-                            <input type="text" name="description" placeholder="Description d'événement">
+                            <input type="text" name="lieu" placeholder="Lieu d'événement *" required>
                         </div>
                         <div class="col-lg-12">
-                            <input type="datetime-local" name="date">
+                            <input type="text" name="description" placeholder="Description d'événement *" required>
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="datetime-local" name="date" required>
                         </div>
                         <div class="col-lg-12 center">
                             <button class="btn btn-primary btn-lg btn-block" name="submit" type="submit" value="post">Ajouter</button>
@@ -112,13 +117,16 @@ $dao = new DAO();
                                 <div class="row">
                                     <div class="col-lg-12">
                                     <input type="hidden" name="idEvent" value="' . $event[0] . '">
-                                        <input type="text" name="titre" value="' . $event[1] . '" placeholder="Titre d\'événement">
+                                        <input type="text" name="titre" value="' . $event[1] . '" placeholder="Titre d\'événement *" required>
                                     </div>
                                     <div class="col-lg-12">
-                                        <input type="text" name="description" value="' . $event[2] . '" placeholder="Description d\'événement">
+                                        <input type="text" name="lieu" value="' . $event[6] . '" placeholder="Lieu d\'événement *" required>
                                     </div>
                                     <div class="col-lg-12">
-                                        <input type="datetime-local" name="date" value="' . $event[3] . '">
+                                        <input type="text" name="description" value="' . $event[2] . '" placeholder="Description d\'événement *" required>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <input type="datetime-local" name="date" value="' . $event[3] . '" required>
                                     </div>
                                     <div class="col-lg-12">
                                         <select name="statut">
@@ -158,7 +166,7 @@ $dao = new DAO();
         L\'événement <strong>' . $event[1] . '</strong> va étre supprimé
       </div>
         <div class="modal-footer">
-          <a type="button" class="btn btn-primary" href="controllers/deleteEvent.php?idEvent=' . $event[0] . '">Comfirmer</a>
+          <a type="button" class="btn btn-primary" href="controllers/deleteEvent.php?idEvent=' . $event[0] . '">Confirmer</a>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
         </div>
       </div>

@@ -7,8 +7,10 @@
     include('../DAO.php');
     $dao=new DAO();
     if($newpw == $cpw){
-        if($dao->getAdminPassword($idAdmin) == $oldpw){
-            if($dao->ChangeAdminPass($newpw,$idAdmin)){
+    	$newPasswordHash = md5($newpw);
+        $oldPasswordHash = md5($oldpw);
+        if($dao->getAdminPassword($idAdmin) == $oldPasswordHash){
+            if($dao->ChangeAdminPass($newPasswordHash,$idAdmin)){
                 header("location:../MenuAdmin.php");
             }else{
                 header("location:../MenuAdmin.php?erreur=2");

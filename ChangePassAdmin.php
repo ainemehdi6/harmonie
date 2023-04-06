@@ -37,7 +37,6 @@
             <i data-feather="eye-off"></i>
             </div>
             </label>
-            <br>
             <label>
             <input class="label-info" type="password" name="newpass" placeholder="Nouveau Mot de passe">
             <div class="password-icon">
@@ -45,7 +44,6 @@
             <i data-feather="eye-off"></i>
             </div>
             </label>
-            <br>
             <label>
             <input class="label-info" type="password" name="cpass" placeholder="Confirmer Mot de passe">
             <div class="password-icon">
@@ -95,4 +93,3 @@ for (let i = 0; i < eyes.length; i++) {
 </body>
 
 </html>
-<?php var_dump($_SESSION['idAdmin']);

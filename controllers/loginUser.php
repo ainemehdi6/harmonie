@@ -2,7 +2,10 @@
 	$password=$_POST['password'];
 	include('../DAO.php');
 	$dao=new DAO();
-	if($dao->Globalauthentification($password)){
+    
+    $passwordHash = md5($password);
+    
+	if($dao->Globalauthentification($passwordHash)){
 		
 		header("location:../EventsList.php");
 	}else{

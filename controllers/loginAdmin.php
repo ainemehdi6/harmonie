@@ -3,7 +3,10 @@
 	$password=$_POST['password'];
 	include('../DAO.php');
 	$dao=new DAO();
-	if($dao->authentificationUser($email,$password)){
+    
+    $passwordHash = md5($password);
+    
+	if($dao->authentificationUser($email,$passwordHash)){
 		session_start();
 		$info=$dao->User($email);
         foreach($info as $in){

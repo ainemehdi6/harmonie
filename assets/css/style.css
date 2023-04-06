@@ -210,7 +210,7 @@ label {
     border-radius: 0.8rem;
     font-family: arial;
     background: var(--gray);
-    margin-bottom:10px auto;
+    margin-bottom:10px;
 }
 
 label {
@@ -995,4 +995,21 @@ job_post.post-popup,
     #nav {
         display: none;
     }
+ .post-project-fields form input,
+    .post-project-fields form textarea,
+    .post-project-fields form select {
+        width: 85%;
+    }
+}
+
+#listbutt {
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.btnS {
+    display: flex;
+    justify-content: center;
 }

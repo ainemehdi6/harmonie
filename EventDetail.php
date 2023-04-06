@@ -26,7 +26,7 @@ $dao = new DAO();
 </head>
 
 <body>
-
+<?php require('assets/models/navbar.php')?>
     <?php include_once('assets/models/headerAdmin.php') ?>
 
 
@@ -43,7 +43,9 @@ $dao = new DAO();
     </div>
 
     <main>
-
+		<div class="btns-grp">
+            <a href="GestionEvents.php" class="btn btn-main btn-primary"">Liste des événements</a>
+        </div>
         <table class="table table-bordered thead-dark table-striped">
             <thead>
                 <tr>

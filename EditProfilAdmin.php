@@ -33,17 +33,17 @@ $dao = new DAO();
             $infoAdmin = $dao->getAdminProfil($_SESSION['idAdmin']);
             foreach ($infoAdmin as $info) {
                 echo '<form class="change-password" action="controllers/EditProfilAdmin.php" method="POST">
-                <div class="input">
+                <div class="input" style="margin-bottom:15px">
                         <input type="hidden" name="idAdmin" value="' . $info[0] . '">
                         <input class="input-form-editprofiladmin" type="text" name="oldfirstname" placeholder="Prénom Admin" value="' . $info[1] . '">
-                    </div> <br>
-                    <div class="input">
+                    </div>
+                    <div class="input" style="margin-bottom:15px">
                         <input class="input-form-editprofiladmin" type="text" name="oldlastname" placeholder="Nom Admin" value="' . $info[2] . '">
-                    </div> <br>
-                    <div class="input">
+                    </div>
+                    <div class="input" style="margin-bottom:15px">
                         <input class="input-form-editprofiladmin" type="text" name="oldemail" placeholder="email Admin" value="' . $info[3] . '">
-                    </div> <br>
-                    <div class="input">
+                    </div>
+                    <div class="input" style="margin-bottom:15px">
                         <input class="input-form-editprofiladmin" type="text" name="oldphonenumber" placeholder="téléphone Admin" value="' . $info[4] . '">
                     </div>
                     <div class="button-editprofiladmin" class="button">
@@ -60,4 +60,3 @@ $dao = new DAO();
 </body>
 
 </html>
-<?php var_dump($_SESSION['idAdmin']);
