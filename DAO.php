@@ -162,7 +162,7 @@ class DAO
 		$reponse->execute([]);
 		$lst = [];
 		while ($ligne = $reponse->fetch()) {
-			$lst[] = [$ligne[0], $ligne[1], $ligne[2], $ligne[3], $ligne[4], $ligne[5]];
+			$lst[] = [$ligne[0], $ligne[1], $ligne[2], $ligne[3], $ligne[4], $ligne[5], $ligne[5]];
 		}
 		$reponse->closeCursor();
 		return $lst;
@@ -275,11 +275,11 @@ class DAO
 		if ($ligne = $reponse->fetch()) return true;
 		else return false;
 	}
-	public function EditUser($Nom, $prenom, $email, $numero, $role, $idUser)
+	public function EditUser($Nom, $prenom, $email, $numero, $role, $idUser, $pupitre)
 	{
 		$bdd = $this->connexion();
-		$reponse = $bdd->prepare("UPDATE user set firstName=?,lastName=?,email=?,phoneNumber=? ,role=? where idUser=?");
-		$reponse->execute([$prenom, $Nom, $email, $numero, $role, $idUser]);
+		$reponse = $bdd->prepare("UPDATE user set firstName=?,lastName=?,email=?,phoneNumber=? ,role=, pupitre=? where idUser=?");
+		$reponse->execute([$prenom, $Nom, $email, $numero, $role, $pupitre, $idUser]);
 		if ($ligne = $reponse->fetch()) return true;
 		else return false;
 	}
@@ -300,11 +300,11 @@ class DAO
 		if ($ligne = $reponse->fetch()) return true;
 		else return false;
 	}
-	public function AddUser($nom, $prenom, $email, $numero, $role)
+	public function AddUser($nom, $prenom, $email, $numero, $role, $pupitre)
 	{
 		$bdd = $this->connexion();
-		$reponse = $bdd->prepare("INSERT INTO user(lastName,firstName,email,phoneNumber,role) values(?,?,?,?,?)");
-		$reponse->execute([$nom, $prenom, $email, $numero, $role]);
+		$reponse = $bdd->prepare("INSERT INTO user(lastName,firstName,email,phoneNumber,role,pupitre) values(?,?,?,?,?,?)");
+		$reponse->execute([$nom, $prenom, $email, $numero, $role, $pupitre]);
 		if ($ligne = $reponse->fetch()) return true;
 		else return false;
 	}

@@ -18,5 +18,3 @@
 		header("location:../loginAdmin.php?erreur=2");
 		die();
 	}
-
-?>
