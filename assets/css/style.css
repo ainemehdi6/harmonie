@@ -1009,3 +1009,15 @@ job_post.post-popup,
 .navbar-nav .nav-item.active>.nav-link:hover {
     background-color: blue;
 }
+
+#listbutt {
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.btnS {
+    display: flex;
+    justify-content: center;
+}

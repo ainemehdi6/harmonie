@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="header_txt">
-            <h2>Bienvenue</h2>
+            <h2>Bienvenue sur la plateforme de planification des évènements musicaux, harmonie de Bergues</h2>
         </div>
     </header>
     <hr>
